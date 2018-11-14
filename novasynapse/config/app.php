@@ -163,7 +163,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Jadjoubran\LaravelAngular\Provider\LaravelServiceProvider::class,
         
         /*
          * Application Service Providers...
