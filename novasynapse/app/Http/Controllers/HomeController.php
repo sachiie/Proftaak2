@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function dashboard()
     {
+        $results = DB::select('select * from users where id = ?', [1]);
         return view('home');
     }
 
