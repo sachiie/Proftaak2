@@ -63,6 +63,14 @@
                                         {{ __('Logout') }}
                                     </a>
 
+                                    <a class="dropdown-item" href="home">
+                                        home
+                                    </a>
+
+                                    <a class="dropdown-item" href="profilepage">
+                                        profilepage
+                                    </a>
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
