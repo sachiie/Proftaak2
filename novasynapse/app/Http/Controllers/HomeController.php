@@ -28,14 +28,23 @@ class HomeController extends Controller
     public function dashboard()
     {
         $id = Auth::user()->id;
+
         $results = DB::table('users')->where('id', '=', $id)->get();
         $info = DB::table('user_details')->where('user_id', '=', $id)->get();
-        return view('home', ['results' => $results], ['info' => $info]);
-        return view('home');
+
+            return view('home', ['results' => $results], ['info' => $info]);
     }
 
     public function home()
     {
+        $id = Auth::user()->id;
+        $count = count(DB::table('user_details')->get()->where("user_id", $id));
+
+        if($count != 1){
+            DB::table('user_details')->insert(
+                ['user_id' => $id, 'profile_name' => Auth::user()->name, 'profile_bio' => 'nobio']
+            );
+        }
         return view('welcome');
     }
 

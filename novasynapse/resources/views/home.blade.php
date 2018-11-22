@@ -13,7 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                    {{ $current_url = explode('?', $current_url);
+                    echo $current_url[0]; }}
                     You are logged in!
 
                     @foreach($results as $results)
