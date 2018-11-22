@@ -20,3 +20,5 @@ Route::get('/home', 'HomeController@home')->name('home');
 // Route::get('insert','StudInsertController@insertform');
 Route::post('/updateuser/naam','UserModelController@storenaam');
 Route::post('/updateuser/bio','UserModelController@storebio');
+Route::post('/updateuser/profilepic','UserModelController@uploadprofilepic');
+Route::post('/updateuser/backgroundpic','UserModelController@uploadbackgroundpic');

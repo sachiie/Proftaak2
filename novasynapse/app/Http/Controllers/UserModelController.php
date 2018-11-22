@@ -56,12 +56,11 @@ class UserModelController extends Controller
             $name = $request->input('userNaam');   
     
             DB::table('user_details')->insert(
-                ['user_id' => $id, 'profile_name' => $name, 'profile_bio' => 'nobio', 'profile_background' => 'nopic', 'profile_image' => 'nopic']
+                ['user_id' => $id, 'profile_name' => $name, 'profile_bio' => 'nobio']
             );
 
         }
 
-        $id = Auth::user()->id;
         $results = DB::table('users')->where('id', '=', $id)->get();
         $info = DB::table('user_details')->where('user_id', '=', $id)->get();
         return view('home', ['results' => $results], ['info' => $info]);
@@ -90,12 +89,11 @@ class UserModelController extends Controller
     
     
             DB::table('user_details')->insert(
-                ['user_id' => $id, 'profile_name' => 'noname', 'profile_bio' => $bio, 'profile_background' => 'nopic', 'profile_image' => 'nopic']
+                ['user_id' => $id, 'profile_name' => 'noname', 'profile_bio' => $bio]
             );
 
         }
 
-        $id = Auth::user()->id;
         $results = DB::table('users')->where('id', '=', $id)->get();
         $info = DB::table('user_details')->where('user_id', '=', $id)->get();
         return view('home', ['results' => $results], ['info' => $info]);
@@ -106,30 +104,24 @@ class UserModelController extends Controller
     {
         $id = Auth::user()->id;
 
-        $count = count(DB::table('user_details')->get()->where("user_id", $id));
-        $photoName = $id.'.'.$request->user_photo->getClientOriginalExtension();
+        // $photoName = $id.'.'.$request->profilepic->getClientOriginalExtension();
+        imagepng(imagecreatefromstring(file_get_contents($request->profilepic)), "css/profile-images/".$id.".png");
+        // $request->profilepic->move(public_path('css/profile-images'), $photoName);
 
-        if($count == 1){
-        $bio = $request->input('comment');
+        $results = DB::table('users')->where('id', '=', $id)->get();
+        $info = DB::table('user_details')->where('user_id', '=', $id)->get();
+        return view('home', ['results' => $results], ['info' => $info]);
 
+    }
 
-        DB::table('user_details')->update(
-            ['profile_bio' => $bio]
-        );
-
-        }
-        else
-        {
-            $bio = $request->input('comment');
-    
-    
-            DB::table('user_details')->insert(
-                ['user_id' => $id, 'profile_name' => 'noname', 'profile_bio' => $bio, 'profile_background' => 'nopic', 'profile_image' => 'nopic']
-            );
-
-        }
-
+    public function uploadbackgroundpic(Request $request)
+    {
         $id = Auth::user()->id;
+
+        // $photoName = $id.'.'.$request->profilepic->getClientOriginalExtension();
+        imagepng(imagecreatefromstring(file_get_contents($request->backgroundpic)), "css/background-images/".$id.".png");
+        // $request->profilepic->move(public_path('css/profile-images'), $photoName);
+
         $results = DB::table('users')->where('id', '=', $id)->get();
         $info = DB::table('user_details')->where('user_id', '=', $id)->get();
         return view('home', ['results' => $results], ['info' => $info]);
