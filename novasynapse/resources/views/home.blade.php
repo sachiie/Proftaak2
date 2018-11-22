@@ -17,13 +17,31 @@
                     You are logged in!
 
                     @foreach($results as $results)
-                        {{  $results->name }}
+                        @foreach ($info as $info)
+                            
+                        {{  $info->profile_name }}
+
+                        <div class="form-group user-form">
+                            <picture>
+                                <source srcset="..." type="image/svg+xml">
+                                <img src="..." class="img-fluid img-thumbnail" alt="...">
+                            </picture>
+                            <form action="{{ url('/updateuser/naam')}}" method="POST">
+                            {{csrf_field()}}
+                            <label for="userNaam">name:</label>
+                            <input name="userNaam" id="userNaam" type="text" class="form-control" value="{{  $info->profile_name }}">
+                            <button type="submit" class="btn" style="position: absolute; left: -9999px">Send</button>
+                            </form>
+                            <form action="{{ url('/updateuser/bio')}}" method="POST">
+                            {{csrf_field()}}
+                            <label for="comment">comment:</label>
+                            <textarea  name="comment" id="comment" type="textarea" rows="4" cols="50" class="form-control">{{  $info->profile_bio }}</textarea>
+                            <button type="submit" class="btn">Send</button>
+                            </form>
+                        </div>
+
+                        @endforeach
                     @endforeach
-
-
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Launch demo modal
-                    </button>
                       
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -36,17 +54,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <label for="comment">Naam:</label>
-                            <div class="form-group">
-                                <form action = "updateuser" method = "post">
-                                    <meta name="csrf-token" content="{{ csrf_token() }}">
-                                    <input id="userNaam" type="text" class="form-control" name="userNaam" placeholder="Naam">
-                                    <label for="comment">Comment:</label>
-                                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <input type="submit" class="btn btn-primary">
-                                </form>
-                            </div>
+                          
                         </div>
                         <div class="modal-footer">
 

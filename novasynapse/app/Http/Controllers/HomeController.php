@@ -29,25 +29,14 @@ class HomeController extends Controller
     {
         $id = Auth::user()->id;
         $results = DB::table('users')->where('id', '=', $id)->get();
-        return view('home', ['results' => $results]);
-        // return view('home');
+        $info = DB::table('user_details')->where('user_id', '=', $id)->get();
+        return view('home', ['results' => $results], ['info' => $info]);
+        return view('home');
     }
 
     public function home()
     {
         return view('welcome');
-    }
-
-    public function updateuser()
-    {
-
-        
-        $id = Auth::user()->id;
-        $results = DB::table('users')->where('id', '=', $id)->get();
-        return view('home', ['results' => $results]);
-        // DB::table('users')
-        // ->where('id', 1)
-        // ->update(['votes' => 1]);   
     }
 
 }

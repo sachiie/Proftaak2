@@ -18,4 +18,5 @@ Route::get('/profilepage', 'HomeController@dashboard')->name('profilepage');
 Route::get('/home', 'HomeController@home')->name('home');
 
 // Route::get('insert','StudInsertController@insertform');
-Route::post('updateuser','UserModelController@store')->name('profilepage');;
+Route::post('/updateuser/naam','UserModelController@storenaam');
+Route::post('/updateuser/bio','UserModelController@storebio');
