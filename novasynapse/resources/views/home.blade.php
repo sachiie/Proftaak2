@@ -13,8 +13,6 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    {{ $current_url = explode('?', $current_url);
-                    echo $current_url[0]; }}
                     You are logged in!
 
                     @foreach($results as $results)
@@ -28,25 +26,25 @@
                                 <img src="css/profile-images/{{$results->id}}.png" style="height: 100px; width: 100px;">
                                 <img src="css/background-images/{{$results->id}}.png" style="height: 100px; width: 100px;">
                             </picture>
-                            <form action="{{ url('/updateuser/naam')}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ url('/naam')}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <label for="userNaam">name:</label>
                             <input name="userNaam" id="userNaam" type="text" class="form-control" value="{{  $info->profile_name }}">
                             <button type="submit" class="btn" style="position: absolute; left: -9999px">Send</button>
                             </form>
-                            <form action="{{ url('/updateuser/bio')}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ url('/bio')}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <label for="comment">comment:</label>
                             <textarea  name="comment" id="comment" type="textarea" rows="4" cols="50" class="form-control">{{  $info->profile_bio }}</textarea>
                             <button type="submit" class="btn">Send</button>
                             </form>
-                            <form action="{{ url('/updateuser/profilepic')}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ url('/profilepic')}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <label for="avatar">Choose a profile picture:</label>
                             <input type="file" id="profilepic" name="profilepic" accept="image/png, image/jpeg">
                             <button type="submit" class="btn">Send</button>
                             </form>
-                            <form action="{{ url('/updateuser/backgroundpic')}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ url('/backgroundpic')}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <label for="avatar">Choose a background picture:</label>
                             <input type="file" id="backgroundpic" name="backgroundpic" accept="image/png, image/jpeg">

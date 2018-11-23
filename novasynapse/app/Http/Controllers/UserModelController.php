@@ -45,8 +45,12 @@ class UserModelController extends Controller
         if($count == 1){
         $name = $request->input('userNaam');
 
+        if ($name == null) {
+            $name = "please fill in a name";
+        }
 
-        DB::table('user_details')->update(
+
+        DB::table('user_details')->where("user_id", $id)->update(
             ['profile_name' => $name]
         );
 
@@ -77,8 +81,12 @@ class UserModelController extends Controller
         if($count == 1){
         $bio = $request->input('comment');
 
+        if ($bio == null) {
+            $bio = "please fill in a bio";
+        }
 
-        DB::table('user_details')->update(
+
+        DB::table('user_details')->where("user_id", $id)->update(
             ['profile_bio' => $bio]
         );
 
@@ -105,7 +113,9 @@ class UserModelController extends Controller
         $id = Auth::user()->id;
 
         // $photoName = $id.'.'.$request->profilepic->getClientOriginalExtension();
+        if(isset($request->profilepic)){
         imagepng(imagecreatefromstring(file_get_contents($request->profilepic)), "css/profile-images/".$id.".png");
+        }
         // $request->profilepic->move(public_path('css/profile-images'), $photoName);
 
         $results = DB::table('users')->where('id', '=', $id)->get();
@@ -119,7 +129,9 @@ class UserModelController extends Controller
         $id = Auth::user()->id;
 
         // $photoName = $id.'.'.$request->profilepic->getClientOriginalExtension();
+        if(isset($request->backgroundpic)){
         imagepng(imagecreatefromstring(file_get_contents($request->backgroundpic)), "css/background-images/".$id.".png");
+        }
         // $request->profilepic->move(public_path('css/profile-images'), $photoName);
 
         $results = DB::table('users')->where('id', '=', $id)->get();
