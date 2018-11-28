@@ -1,5 +1,10 @@
+@font-face {
+    font-family: Droid;
+    src: url(droid.ttf);
+}
+
 html, body {
-    background-color: #fff;
+    background: #2E294E !important;
     color: #636b6f;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
@@ -52,22 +57,35 @@ html, body {
 nav{
     background: #2E294E !important;
     height: 70px;
+    font-family: Droid;
+    font-size: 30px;
 }
 
 nav a{
     color: #E71D36 !important;
 }
 
-.dropdown-menu a:hover{
+.dropdown-item:hover{
     background: #2E294E !important;
 }
 
-.dropdown-menu .dropdown-menu-right{
-    background: #2E294E;
+.dropdown-item{
+    font-family: Arial;
+}
+
+#navbarDropdown{
+    background-color: #E71D36 !important;
+    color: #2E294E !important;
+    border-radius: 8px;
+    height: 60px;
 }
 
 .logo{
     width: 50px !important;
     height: 50px !important;
     margin: 0 auto;
+}
+
+.home-container{
+    background: #2E294E !important;
 }
