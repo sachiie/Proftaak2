@@ -62,6 +62,7 @@ nav{
 }
 
 nav a{
+    letter-spacing: 0.5px;
     color: #E71D36 !important;
 }
 
@@ -74,15 +75,17 @@ nav a{
 }
 
 #navbarDropdown{
+    text-align: center;
+    margin-top: 5px;
     background-color: #E71D36 !important;
     color: #2E294E !important;
     border-radius: 8px;
-    height: 60px;
+    height: 50px;
 }
 
 .logo{
-    width: 50px !important;
-    height: 50px !important;
+    width: 65px !important;
+    height: 65px !important;
     margin: 0 auto;
 }
 
