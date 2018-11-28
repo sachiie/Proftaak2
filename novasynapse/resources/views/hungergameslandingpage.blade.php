@@ -3,7 +3,7 @@
 @section('content')
 <div cass="flex-center position-ref full-height">
     <div class="content">
-        <button type="submit">start</button>
+        <button onclick=" GenerateRandomUsers()">start</button>
     </div>
 </div>
 
