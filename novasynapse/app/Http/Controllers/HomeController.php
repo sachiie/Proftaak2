@@ -47,5 +47,12 @@ class HomeController extends Controller
         }
         return view('welcome');
     }
+    public function hungergames()
+    {
+        $id = Auth::user()->id;
 
+        $results = DB::table('user_details')->where('user_id', '=', $id)->get();
+
+        return view('hungergameslandingpage', ['results' => $results]);
+    }
 }
