@@ -36,7 +36,7 @@ html, body {
 }
 
 .links > a {
-    color: #636b6f;
+    color: #E71D36 !important;
     padding: 0 25px;
     font-size: 13px;
     font-weight: 600;
@@ -47,4 +47,27 @@ html, body {
 
 .m-b-md {
     margin-bottom: 30px;
+}
+
+nav{
+    background: #2E294E !important;
+    height: 70px;
+}
+
+nav a{
+    color: #E71D36 !important;
+}
+
+.dropdown-menu a:hover{
+    background: #2E294E !important;
+}
+
+.dropdown-menu .dropdown-menu-right{
+    background: #2E294E;
+}
+
+.logo{
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 auto;
 }
