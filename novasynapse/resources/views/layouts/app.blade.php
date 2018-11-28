@@ -65,11 +65,11 @@
                                     </a>
 
                                     <a class="dropdown-item" href="home">
-                                        home
+                                        Home
                                     </a>
 
                                     <a class="dropdown-item" href="profilepage">
-                                        profilepage
+                                        My profile page
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
