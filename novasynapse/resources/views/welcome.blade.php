@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-      l  <div cass="flex-center position-ref full-height">
+      {{-- l  <div cass="flex-center position-ref full-height">
             <div class="content home-container">
                 <div class="title m-b-md">
                     <img class="logoHome" src="css/logoText.png">
@@ -20,6 +20,24 @@
 
                     </div>
                     </div>
+                </div>
+            </div>
+        </div> --}}
+
+        <div class="container-fluid">
+            <div class="wrapper">
+                <div class="row justify-content-center ">
+                        <img class="logoHome" src="css/logoText.png">
+                </div>
+                <div class="row justify-content-center flex-wrap">
+                        <div class="col-7 news-header">
+                            <h1>News</h1>
+                            <div class="news">News</div>
+                        </div>
+                        <div class="col-4 users-header">
+                            <h1>Online users</h1>
+                            <div class="active-users">Users</div>
+                        </div>
                 </div>
             </div>
         </div>
