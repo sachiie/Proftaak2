@@ -97,4 +97,5 @@
     </div>
 </body>
 </html>
+<script src="{{ asset('js/home.js') }}" defer></script>
 <script src="{{ asset('js/hungergames.js') }}" defer></script>
