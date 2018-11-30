@@ -1,5 +1,6 @@
 $( document ).ready(function() {
     gameStarted = false;
+    $( "#start" ).hide();
     var Person = [];
     var Players = ["Player1", "Player2", "Player3", "Player4", "Player5", "Player6",
     "Player7", "Player8", "Player9"];
