@@ -49,23 +49,24 @@ console.log(Person);
 
 $(document).on('click', ".player", function(){
     id = $(this).attr("id");
-    $("#player-list").empty();
+  
 
     $("#submitPlayer").on('click', function(){
+        console.log(document.getElementById("name").value);
         Person['Player'+id]["name"] =  document.getElementById("name").value;
         Person['Player'+id]["image"] =  document.getElementById("link").value;
         Person['Player'+id]["sex"] =  document.getElementById("sex").value;
-
+        $("#player-list").empty();
         $.each(Players, function(index) {
-        
-           Person[Players[index]] = {
-               "player": Person[Players[index]]["Player"],
-               "name" : Person[Players[index]]["name"],
-               "sex" : Person[Players[index]]["sex"],
-               "image" : Person[Players[index]]["image"],
-               "status" : "alive"                  
-           };
-   
+
+        //    Person[Players[index]] = {
+        //        "player": Person[Players[index]]["Player"],
+        //        "name" : Person[Players[index]]["name"],
+        //        "sex" : Person[Players[index]]["sex"],
+        //        "image" : Person[Players[index]]["image"],
+        //        "status" : "alive"                  
+        //    };
+        //    console.log("ik kom hier");
            // $("#player-list").prepend('<label for="' + Person[Players[index]]["name"] + '">' + Person[Players[index]]["name"] + '</label>');
            $("#player-list").append('<img data-toggle="modal" data-target="#myModal" id="' + Person[Players[index]]["player"] + '" name="' + Person[Players[index]]["name"] + '" src="' + Person[Players[index]]["image"] + '" alt="..." style="height: 150px;" class="img-thumbnail player">');
        });
