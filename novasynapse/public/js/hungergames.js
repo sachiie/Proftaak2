@@ -5,15 +5,15 @@ $( document ).ready(function() {
     "Player7", "Player8", "Player9"];
 
 // {name:"", sex:"", image:"", status:"alive"}
-$("#start").click(GenerateRandomUsers);
+$("#generate").click(GenerateRandomUsers);
 
 function GenerateRandomUsers() {
     gameStarted = true;
 
     var randomNamesList = ["bob", "marcella", "steve"];
-    var randomImageList = ["https://www.ienglishstatus.com/wp-content/uploads/2018/04/Cute-Whatsapp-DP.jpg",
-    "https://i.imgur.com/oW1dGDI.jpg","https://amp.businessinsider.com/images/5899ffcf6e09a897008b5c04-750-750.jpg",
-    "http://i.imgur.com/cDqspyH.png"];
+    var randomImageList = ["http://footage.framepool.com/shotimg/qf/161475002-gossip-standing-out-from-the-crowd-multicultural-business-attire.jpg",
+    "https://banner2.kisspng.com/20180207/wte/kisspng-stock-photography-black-happiness-african-american-recommended-gesture-business-people-do-5a7b5e050e1b08.9480166115180344370578.jpg","https://amp.businessinsider.com/images/5899ffcf6e09a897008b5c04-750-750.jpg",
+    "https://banner2.kisspng.com/20180428/vxq/kisspng-thumb-signal-businessperson-stock-photography-ok-5ae4846b292d62.8008028615249255471687.jpg"];
     var randomSex = ["Male", "Female"];
     
     $.each(Players, function( index, value ) {
@@ -41,7 +41,8 @@ function GenerateRandomUsers() {
 
     
 if(gameStarted == true){
-    $( "#start" ).hide();
+    $( "#generate" ).hide();
+    $( "#start" ).show();
 }
 console.log(Person);
     

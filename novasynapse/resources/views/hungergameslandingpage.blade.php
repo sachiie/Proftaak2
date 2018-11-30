@@ -3,7 +3,8 @@
 @section('content')
 <div cass="flex-center position-ref full-height">
     <div class="content">
-        <button id="start" >start</button>
+        <button id="generate">Generate</button>
+        <button id="start" hidden>Start</button>
             {{-- //list of users gets generated here --}}
         <div id="player-list">
         </div>
