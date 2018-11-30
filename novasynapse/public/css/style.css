@@ -160,7 +160,7 @@ h1{
     text-align: left;
 }
 
-.hideme
+.hideme, .hide
 {
     opacity: 0;
 }
