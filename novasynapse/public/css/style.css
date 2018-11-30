@@ -1,3 +1,237 @@
+<<<<<<< Updated upstream
+@font-face {
+    font-family: Droid;
+    src: url(droid.ttf);
+}
+
+html, body {
+    background: url(home.png);
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center !important;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #E71D36 !important;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.navbar-default {
+    box-shadow: none;
+  }
+
+nav{
+    background: #2E294E !important;
+    height: 70px;
+    font-family: Droid;
+    font-size: 30px;
+    box-shadow: none;
+}
+
+nav a{
+    letter-spacing: 0.5px;
+    color: #E71D36 !important;
+}
+
+.dropdown-item:hover{
+    background: #2E294E !important;
+}
+
+.dropdown-item{
+    font-family: Arial;
+}
+
+#navbarDropdown{
+    text-align: center !important;
+    margin-top: 10px;
+    background-color: #E71D36 !important;
+    color: #2E294E !important;
+    border-radius: 8px;
+    width: 100px;
+    height: 40px;
+    padding: 0px;
+}
+
+.logo{
+    width: 65px !important;
+    height: 65px !important;
+    margin: 0 auto;
+}
+
+.logoHome{
+    width: 175px;
+    height: 175px;
+}
+
+.container, .row{
+    /* width: 100%; */
+}
+
+.home-container{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* width: 100%;
+    height: 100vh; */
+}
+
+.page-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: Droid !important;
+    color: #E71D36 !important;
+}
+
+ .news{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 20px; */
+    /* width: 850px; */
+    height: 300px;
+    background: #DBD6CB;
+}
+
+.active-users{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 30%; */
+    /* width: 400px; */
+    height: 300px;
+    background: #DBD6CB;
+}
+
+.users-header{
+    width: 20% !important;
+    text-align: left;
+}
+
+
+.news-header{
+    width: 75% !important;
+    text-align: left;
+}
+
+.hideme
+{
+    opacity: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: url(home.png);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #E71D36; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(177, 23, 41); 
+}
+
+@media only screen and (min-width: 850px) {
+    .flex-wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+/* =======
+.wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.box { display: block; min-width: 300px; height: 300px; margin: 10px; background-color: white; border-radius: 5px; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); overflow: hidden; }
+
+.upload-options { position: relative; height: 75px; background-color: cadetblue; cursor: pointer; overflow: hidden; text-align: center; -webkit-transition: background-color ease-in-out 150ms; -o-transition: background-color ease-in-out 150ms; transition: background-color ease-in-out 150ms; }
+
+.upload-options:hover { background-color: #7fb1b3; }
+
+.upload-options input { width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1; }
+
+.upload-options label { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 100%; height: 100%; font-weight: 400; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; overflow: hidden; }
+
+.upload-options label::after { content: 'add'; font-family: 'Material Icons'; position: absolute; font-size: 2.5rem; color: #e6e6e6; top: calc(50% - 2.5rem); left: calc(50% - 1.25rem); z-index: 0; }
+
+.upload-options label span { display: inline-block; width: 50%; height: 100%; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; vertical-align: middle; text-align: center; }
+
+.upload-options label span:hover i.material-icons { color: lightgray; }
+
+.js--image-preview { height: 225px; width: 100%; position: relative; overflow: hidden; background-image: url(""); background-color: white; background-position: center center; background-repeat: no-repeat; background-size: cover; }
+
+.js--image-preview::after { content: "photo_size_select_actual"; font-family: 'Material Icons'; position: relative; font-size: 4.5em; color: #e6e6e6; top: calc(50% - 3rem); left: calc(50% - 2.25rem); z-index: 0; }
+
+.js--image-preview.js--no-default::after { display: none; }
+
+.js--image-preview:nth-child(2) { background-image: url("http://bastianandre.at/giphy.gif"); }
+
+i.material-icons { -webkit-transition: color 100ms ease-in-out; -o-transition: color 100ms ease-in-out; transition: color 100ms ease-in-out; font-size: 2.25em; line-height: 55px; color: white; display: block; }
+
+.drop { display: block; position: absolute; background: rgba(95, 158, 160, 0.2); border-radius: 100%; -webkit-transform: scale(0); -ms-transform: scale(0); transform: scale(0); }
+
+.animate { -webkit-animation: ripple 0.4s linear; animation: ripple 0.4s linear; }
+
+@-webkit-keyframes ripple { 100% { opacity: 0;
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5); } }
+
+@keyframes ripple { 100% { opacity: 0;
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5); } }
+>>>>>>> Stashed changes */
 @font-face {
     font-family: Droid;
     src: url(droid.ttf);

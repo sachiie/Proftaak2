@@ -38,13 +38,13 @@
                             <h1>Online users</h1>
                             <div class="active-users">Users</div>
                         </div>
-                        <div class="col-6 mt-3 news-header hideme">
+                        <div class="col-5 mt-3 news-header hideme">
                                 <h1>Top Survivors</h1>
-                                <div class="news">Highscores</div>
+                                <div class="news">News</div>
                             </div>
-                            <div class="col-5 mt-3 users-header hideme">
-                                <h1 class="hide">___________________________________________</h1>
-                                <div class="play-direct"></div>
+                            <div class="col-6 mt-3 users-header hideme">
+                                <h1>___________________________________________________</h1>
+                                <div class="active-users">Users</div>
                             </div>
                 </div>
             </div>

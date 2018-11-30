@@ -28,13 +28,14 @@
                             </picture>
                             <form action="{{ url('/naam')}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
-                            <label for="userNaam">name:</label>
+                            
+                            <label for="userNaam">Username</label>
                             <input name="userNaam" id="userNaam" type="text" class="form-control" value="{{  $info->profile_name }}">
                             <button type="submit" class="btn" style="position: absolute; left: -9999px">Send</button>
                             </form>
                             <form action="{{ url('/bio')}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
-                            <label for="comment">comment:</label>
+                            <label for="comment">Biography</label>
                             <textarea  name="comment" id="comment" type="textarea" rows="4" cols="50" class="form-control">{{  $info->profile_bio }}</textarea>
                             <button type="submit" class="btn">Send</button>
                             </form>
@@ -49,6 +50,7 @@
                             <label for="avatar">Choose a background picture:</label>
                             <input type="file" id="backgroundpic" name="backgroundpic" accept="image/png, image/jpeg">
                             <button type="submit" class="btn">Send</button>
+
                             </form>
                         </div>
 
