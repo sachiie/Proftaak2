@@ -5,6 +5,7 @@
     <div class="content">
         <button id="generate" class="btn">Generate</button>
         <button id="start" class="btn">Start</button>
+        <button id="next" class="btn">Next day</button>
             {{-- //list of users gets generated here --}}
         <div id="player-list">
         </div>
