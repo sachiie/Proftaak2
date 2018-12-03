@@ -7,6 +7,7 @@ $( document ).ready(function() {
 
 // {name:"", sex:"", image:"", status:"alive"}
 $("#generate").click(GenerateRandomUsers);
+$("#start").click(StartGame);
 
 function GenerateRandomUsers() {
     gameStarted = true;
@@ -75,6 +76,14 @@ $(document).on('click', ".player", function(){
     });
     console.log(Person);
 });
+
+function StartGame() {
+    $("#player-list").empty();
+    $( "#start" ).hide()
+
+    var hostileEventsList = ["tripped on" + pronoun + "dick and fell to their death",]
+
+}
 
 
 
