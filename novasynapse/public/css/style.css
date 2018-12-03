@@ -91,7 +91,7 @@ nav a {
   text-align: center !important;
   margin-top: 10px;
   background-color: #E71D36 !important;
-  color: #2E294E !important;
+  color: #dddddd !important;
   border-radius: 8px;
   width: 100px;
   height: 40px;
@@ -107,19 +107,6 @@ nav a {
 .logoHome {
   width: 175px;
   height: 175px;
-}
-
-.container, .row {
-  /* width: 100%; */
-}
-
-.home-container {
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-  /* width: 100%;
-    height: 100vh; */
 }
 
 .page-content {
@@ -157,8 +144,6 @@ h1 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  /* margin-right: 20px; */
-  /* width: 850px; */
   height: 300px;
   background: #DBD6CB;
 }
@@ -177,8 +162,6 @@ h1 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  /* width: 30%; */
-  /* width: 400px; */
   height: 300px;
   background: #DBD6CB;
 }
@@ -240,9 +223,70 @@ h1 {
 }
 
 .login-container {
-  background-color: white;
-  width: 100%;
-  height: 85vh;
+  background-color: url(home.png);
+  height: 90.2vh;
+}
+
+.login-container h1 {
+  color: #2E294E !important;
+}
+
+.lightBulb {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.card-body, .card {
+  color: #2E294E;
+  background-color: #E71D36 !important;
+  border-radius: 0px !important;
+}
+
+.card-body h1, .card h1 {
+  color: #2E294E !important;
+  font-family: Droid, arial;
+}
+
+.card-body button, .card button {
+  letter-spacing: 1px;
+  font-size: 25px;
+  font-family: Droid;
+  background: #2E294E;
+  border: #2E294E;
+}
+
+.card-body button:hover, .card button:hover {
+  background-color: #211e38 !important;
+}
+
+.card-body input, .card input {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+.card-body span, .card-body i, .card span, .card i {
+  background-color: #2E294E !important;
+  border: #2E294E !important;
+}
+
+.card-body a, .card a {
+  color: #2E294E !important;
+}
+
+.card-body .login-container, .card .login-container {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+.card-body .loginBtn, .card .loginBtn {
+  width: 100% !important;
 }
 
 @media only screen and (min-width: 850px) {
