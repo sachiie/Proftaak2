@@ -289,6 +289,30 @@ h1 {
   width: 100% !important;
 }
 
+.hunger-container button {
+  letter-spacing: 1px;
+  font-size: 25px;
+  font-family: Droid;
+  background: #2E294E;
+  border: #2E294E;
+}
+
+.hunger-container button:hover {
+  background-color: #211e38 !important;
+}
+
+.hunger-container #player-list {
+  background: #E71D36;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.hunger-container #player-list img {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 100px;
+}
+
 @media only screen and (min-width: 850px) {
   .flex-wrap {
     display: -webkit-box;

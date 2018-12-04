@@ -1,16 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<div cass="flex-center position-ref full-height">
-    <div class="content">
-        <button id="generate" class="btn">Generate</button>
-        <button id="start" class="btn">Start</button>
-        <button id="next" class="btn">Next day</button>
-            {{-- //list of users gets generated here --}}
-        <div id="player-list">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 hunger-container">
+            <button id="generate" class="btn bubbly-button">Generate</button>
+            <button id="start" class="btn">Start</button>
+            <button id="next" class="btn">Next day</button>
+                {{-- //list of users gets generated here --}}
+            <h1>Your team</h1>
+            <div class="col-sm-6" id="player-list">
+            </div>
         </div>
     </div>
 </div>
+
+@foreach ($results as $results)
+    <div id="username">{{  $results->profile_name }}</div>
+@endforeach
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">

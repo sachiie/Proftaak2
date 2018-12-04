@@ -1,16 +1,22 @@
-// @mixin thunderClip() {
-//     -webkit-clip-path: polygon(0 0, 0 100%, 27% 100%, 65% 53%, 48% 53%, 68% 20%, 48% 20%, 66% 0);
-//     clip-path: polygon(0 0, 0 100%, 27% 100%, 65% 53%, 48% 53%, 68% 20%, 48% 20%, 66% 0);
-// }
 @font-face {
     font-family: Droid;
     src: url(droid.ttf);
 }
 
-//variables
+//font variables
 $droid: Droid;
+
+//url variables
 $homeBg: url(home.png);
 $homeAd: url(play.png);
+
+//color variables
+$novaPink: #E71D36;
+$novaBlue: #2E294E;
+$novaGray: #DBD6CB;
+
+//other variables
+$full: 100%;
 
 html, body {
     background: $homeBg;
@@ -51,7 +57,7 @@ html, body {
 }
 
 .links > a {
-    color: #E71D36 !important;
+    color: $novaPink !important;
     padding: 0 25px;
     font-size: 13px;
     font-weight: 600;
@@ -72,7 +78,7 @@ html, body {
 
 //navbar
 nav{
-    background: #2E294E !important;
+    background: $novaBlue !important;
     height: 70px;
     font-family: $droid;
     font-size: 30px;
@@ -82,12 +88,12 @@ nav{
 nav {
     a{
     letter-spacing: 0.5px;
-    color: #E71D36 !important;
+    color: $novaPink !important;
     }
 }
 
 .dropdown-item:hover{
-    background: #2E294E !important;
+    background: $novaBlue !important;
 }
 
 .dropdown-item{
@@ -97,8 +103,8 @@ nav {
 #navbarDropdown{
     text-align: center !important;
     margin-top: 10px;
-    background-color: #E71D36 !important;
-    color: #2E294E !important;
+    background-color: $novaPink !important;
+    color: rgb(221, 221, 221) !important;
     border-radius: 8px;
     width: 100px;
     height: 40px;
@@ -120,17 +126,8 @@ nav {
 
 //home page
 
-.container, .row{
-    /* width: 100%; */
-}
-
 .home-container{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    /* width: 100%;
-    height: 100vh; */
+
 }
 
 .page-content{
@@ -142,7 +139,7 @@ nav {
 
 h1{
     font-family: $droid !important;
-    color: #E71D36 !important;
+    color: $novaPink !important;
 }
 
  .news{
@@ -150,10 +147,8 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-right: 20px; */
-    /* width: 850px; */
     height: 300px;
-    background: #DBD6CB;
+    background: $novaGray;
 }
 
 .active-users{
@@ -161,10 +156,8 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* width: 30%; */
-    /* width: 400px; */
     height: 300px;
-    background: #DBD6CB;
+    background: $novaGray;
 }
 
 .play-direct{
@@ -189,7 +182,6 @@ h1{
     text-align: left;
 }
 
-
 .news-header{
     width: 75% !important;
     text-align: left;
@@ -212,21 +204,109 @@ h1{
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #E71D36; 
+    background: $novaPink; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(177, 23, 41); 
 }
 
-//end scrollbar lel
+//end scrollbar
 
+//login page
 .login-container{
     // @include thunderClip();
-    background-color: white;
-    width: 100%;
-    height: 85vh;
+    background-color: $homeBg;
+    height: 90.2vh;
+    
+    h1{
+        color: $novaBlue !important;
+    }
 }
+
+.lightBulb{
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.card-body, .card{
+    color: $novaBlue;
+    background-color: $novaPink !important;
+    border-radius: 0px !important;
+
+    h1{
+        color: $novaBlue !important;
+        font-family: $droid, arial;
+    }
+
+    button{
+        letter-spacing: 1px;
+        font-size: 25px;
+        font-family: $droid;
+        background: $novaBlue;
+        border: $novaBlue;
+    }
+
+    button:hover{
+        background-color: rgb(33, 30, 56) !important;
+    }
+
+    input{
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+    }
+
+    span, i{
+        background-color: $novaBlue !important;
+        border: $novaBlue !important
+    }
+
+    a{
+        color: $novaBlue !important;
+    }
+
+    .login-container{
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .loginBtn{
+        width: 100% !important;
+    }
+
+}
+
+//end login page
+
+//hunger games page
+.hunger-container{
+    button{
+        letter-spacing: 1px;
+        font-size: 25px;
+        font-family: $droid;
+        background: $novaBlue;
+        border: $novaBlue;
+    }
+
+    button:hover{
+        background-color: rgb(33, 30, 56) !important;
+    }
+
+    #player-list{
+        background: $novaPink;
+        border-radius: 4px;
+        padding: 10px;
+
+        img{
+            max-width: 150px;
+            max-height: 150px;
+            border-radius: 100px;
+        }
+    }
+}
+
+//end hungergames page
 
 @media only screen and (min-width: 850px) {
     .flex-wrap {
@@ -234,3 +314,4 @@ h1{
         flex-wrap: wrap;
     }
 }
+
