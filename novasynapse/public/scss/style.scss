@@ -280,7 +280,140 @@ h1{
 //end login page
 
 //hunger games page
+.hungry-container{
+
+    .gender-head{
+        margin-left: 155px !important;
+    }
+
+    .hunger-row{
+        position: relative;
+
+        .logo{
+            margin-left: 0px;
+        }
+
+        h1{
+            color: $novaBlue !important;
+        }
+    }
+
+    .players-row{
+        h1{
+            max-height: 37px;
+        }
+
+        .player-border{
+            border: 2px solid $novaBlue;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .your-img{
+        position: absolute;
+        top: 0 !important;
+    }
+
+    .your-char{
+        padding: 15px;
+    }
+
+    .your-id{
+        padding: 10px;
+        border: 2px solid $novaBlue;
+        border-radius: 4px;
+        // height: 75% !important;
+        .id-name{
+            margin-left: 12% !important;
+        }
+
+    #username{
+        background: $novaBlue;
+        padding: 10px;
+        height: 9% !important;
+
+        h1{
+            padding-left: 65px;
+            color: $novaGray !important;
+            // background: $novaBlue;
+            // padding: 15px;
+        }
+    }
+
+    }
+
+    h1{
+        max-width: 470px;
+    }
+
+    img{
+        max-width: 150px;
+        max-height: 150px;
+        border-radius: 100px;
+    }
+
+    button{
+        letter-spacing: 1px;
+        font-size: 25px;
+        font-family: $droid;
+        background: $novaBlue;
+        border: $novaBlue;
+    }
+
+    button:hover{
+        background-color: rgb(33, 30, 56) !important;
+    }
+
+    .your-char{
+        background: $novaGray;
+    }
+
+    #player-list{
+        max-width: 75%;
+        max-height: 100%;
+        background: $novaGray;
+        border-radius: 4px;
+        padding: 10px;
+
+        img{
+            max-width: 150px;
+            max-height: 150px;
+            border-radius: 100px;
+        }
+    }
+
+}
+
 .hunger-container{
+    // display: flex;
+    // flex-direction: column !important;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: center;
+
+    #your-list{
+        // max-width: 35%;
+    }
+
+    #player-list{
+        // display: flex;
+        // align-items: center; 
+        // max-width: 35%;
+        // height: 50%;
+        // max-height: 50%;
+    }
+
+    h1{
+        max-width: 470px;
+    }
+
+    img{
+        max-width: 150px;
+        max-height: 150px;
+        border-radius: 100px;
+    }
+
     button{
         letter-spacing: 1px;
         font-size: 25px;
@@ -294,7 +427,7 @@ h1{
     }
 
     #player-list{
-        background: $novaPink;
+        background: $novaGray;
         border-radius: 4px;
         padding: 10px;
 

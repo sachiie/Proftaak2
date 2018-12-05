@@ -289,6 +289,112 @@ h1 {
   width: 100% !important;
 }
 
+.hungry-container .gender-head {
+  margin-left: 155px !important;
+}
+
+.hungry-container .hunger-row {
+  position: relative;
+}
+
+.hungry-container .hunger-row .logo {
+  margin-left: 0px;
+}
+
+.hungry-container .hunger-row h1 {
+  color: #2E294E !important;
+}
+
+.hungry-container .players-row h1 {
+  max-height: 37px;
+}
+
+.hungry-container .players-row .player-border {
+  border: 2px solid #2E294E;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.hungry-container .your-img {
+  position: absolute;
+  top: 0 !important;
+}
+
+.hungry-container .your-char {
+  padding: 15px;
+}
+
+.hungry-container .your-id {
+  padding: 10px;
+  border: 2px solid #2E294E;
+  border-radius: 4px;
+}
+
+.hungry-container .your-id .id-name {
+  margin-left: 12% !important;
+}
+
+.hungry-container .your-id #username {
+  background: #2E294E;
+  padding: 10px;
+  height: 9% !important;
+}
+
+.hungry-container .your-id #username h1 {
+  padding-left: 65px;
+  color: #DBD6CB !important;
+}
+
+.hungry-container h1 {
+  max-width: 470px;
+}
+
+.hungry-container img {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 100px;
+}
+
+.hungry-container button {
+  letter-spacing: 1px;
+  font-size: 25px;
+  font-family: Droid;
+  background: #2E294E;
+  border: #2E294E;
+}
+
+.hungry-container button:hover {
+  background-color: #211e38 !important;
+}
+
+.hungry-container .your-char {
+  background: #DBD6CB;
+}
+
+.hungry-container #player-list {
+  max-width: 75%;
+  max-height: 100%;
+  background: #DBD6CB;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.hungry-container #player-list img {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 100px;
+}
+
+.hunger-container h1 {
+  max-width: 470px;
+}
+
+.hunger-container img {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 100px;
+}
+
 .hunger-container button {
   letter-spacing: 1px;
   font-size: 25px;
@@ -302,7 +408,7 @@ h1 {
 }
 
 .hunger-container #player-list {
-  background: #E71D36;
+  background: #DBD6CB;
   border-radius: 4px;
   padding: 10px;
 }
