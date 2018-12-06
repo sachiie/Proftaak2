@@ -63,6 +63,12 @@
           <button id="start" class="btn w-100 fixed-bottom build-header">Start</button>
 </div>
 
+@foreach ($results as $results)
+    <textarea id="username" style="margin-left: -999%;" disabled>
+        {{  $results->profile_name }}
+    </textarea>
+@endforeach
+
 <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">
 <div class="modal-dialog">

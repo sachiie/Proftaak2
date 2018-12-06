@@ -1,12 +1,19 @@
 $( document ).ready(function() {
-    gameStarted = false;
-    $( "#start" ).hide();
-    $( "#next" ).hide();
-    var Person = [];
-    var Players = ["Player1", "Player2", "Player3", "Player4", "Player5", "Player6",
-    "Player7", "Player8", "Player9"];
-    var dayArray = [];
-    var dayCount =1;
+
+gameStarted = false;
+playerCount = 10;
+
+$( "#start" ).hide();
+$( "#next" ).hide();
+
+var Useralias = $('#username').val();
+var Winnername;
+
+var Person = [];
+var Players = ["User","Player1", "Player2", "Player3", "Player4", "Player5", "Player6",
+"Player7", "Player8", "Player9"];
+var dayArray = [];
+var dayCount =1;
 
 // {name:"", sex:"", image:"", status:"alive"}
 $("#generate").click(GenerateRandomUsers);
@@ -24,40 +31,45 @@ function GenerateRandomUsers() {
     
     $.each(Players, function( index, value ) {
         
+    if (Players[index] != "User") {
          sex =  Math.floor(Math.random()*2);
          name = Math.floor(Math.random()*3);
          image = Math.floor(Math.random()*4);
         console.log(name);
         Person[Players[index]] = {
-            "player": index + 1,
+            "player": index,
             "name" : randomNamesList[name],
             "sex" : randomSex[sex],
             "image" : randomImageList[image],
             "status" : "alive"                  
         };
 
-        // $("#player-list").prepend('<label for="' + Person[Players[index]]["name"] + '">' + Person[Players[index]]["name"] + '</label>');
-        $("#player-list").append('<img data-toggle="modal" data-target="#myModal" id="' + Person[Players[index]]["player"] + '" name="' + Person[Players[index]]["name"] + '" src="' + Person[Players[index]]["image"] + '" alt="..." style="height: 150px;" class="img-thumbnail player">');
-    });
+        }
+        else {
+               Person[Players[index]] = {
+                   "player": 10,
+                   "name" : Useralias,
+                   "sex" : "User",
+                   "image" : "css/profile-images/2.png",
+                   "status" : "alive"                  
+               };
+        }
 
-     
-//     $.each(Person, function( index, value ) {
-//        $("#player-list").prepend('<img name="' + Person[Players[index]]["name"] + '" src="' + Person[Players[index]]["image"] + '" alt="..." style="height: 150px;" class="img-thumbnail">');
-//    });
+        $("#player-list").append('<img data-toggle="modal" data-target="#myModal" id="' + Person[Players[index]]["player"] + '" name="' + Person[Players[index]]["name"] + '" src="' + Person[Players[index]]["image"] + '" alt="..." style="height: 150px;" class="img player">');
+    
+    });
 
     
 if(gameStarted == true){
     $( "#generate" ).hide();
     $( "#start" ).show();
 }
-console.log(Person);
-    
+console.log(Person);   
 }
 
 $(document).on('click', ".player", function(){
     id = $(this).attr("id");
   
-
     $("#submitPlayer").on('click', function(){
         console.log(document.getElementById("name").value);
         Person['Player'+id]["name"] =  document.getElementById("name").value;
@@ -66,16 +78,7 @@ $(document).on('click', ".player", function(){
         $("#player-list").empty();
         $.each(Players, function(index) {
 
-        //    Person[Players[index]] = {
-        //        "player": Person[Players[index]]["Player"],
-        //        "name" : Person[Players[index]]["name"],
-        //        "sex" : Person[Players[index]]["sex"],
-        //        "image" : Person[Players[index]]["image"],
-        //        "status" : "alive"                  
-        //    };
-        //    console.log("ik kom hier");
-           // $("#player-list").prepend('<label for="' + Person[Players[index]]["name"] + '">' + Person[Players[index]]["name"] + '</label>');
-           $("#player-list").append('<img data-toggle="modal" data-target="#myModal" id="' + Person[Players[index]]["player"] + '" name="' + Person[Players[index]]["name"] + '" src="' + Person[Players[index]]["image"] + '" alt="..." style="height: 150px;" class="img-thumbnail player">');
+           $("#player-list").append('<img data-toggle="modal" data-target="#myModal" id="' + Person[Players[index]]["player"] + '" name="' + Person[Players[index]]["name"] + '" src="' + Person[Players[index]]["image"] + '" alt="..." style="height: 150px;" class="img player">');
        });
     });
     console.log(Person);
@@ -85,57 +88,12 @@ function StartGame() {
     $("#player-list").empty();
     $( "#start" ).hide()
 
-    // dayCount = 1;
-    // maxDays = 11;
-    // playerCount = 0;
-    // actionCount = 0;
-    // actualDays = 1;
-    // time = 0;
-
-    // // for (dayCount = 1; dayCount < maxDays; dayCount++) {
     Day();
-    // dayArray.push("its day:" + dayCount++);
-
-    // $.each(Players, function(index) {
-    //     if (Person[Players[index]]["status"] == "alive") {
-    //     eventRoll =  Math.floor(Math.random()*2);
-    //     // console.log(eventRoll);
-    //     // console.log("its day:" + actualDays++);
-    //     switch (eventRoll) {
-    //         case 0:
-    //         hostileEvents(index);
-    //             break;
-
-    //         case 1:
-    //         passiveEvents(index);
-    //             break;
-    //     }
-    // }
-    //     // console.log("the day ends");
-    // });
-    // dayArray.push("the day ends");
-    // }
-
-        // $.each(dayArray, function(index){
-        //     setTimeout(function() {
-
-        //         console.log(dayArray[index]);
-
-        //         if(dayArray.length - 1 === index) {
-        //             console.log('loop ends');
-        //         }
-
-        //     }, time);
-        //     time += 1000;
-        //  });
-        // console.log("starting the next day");
 
 }
 
 function Day(params) {
-    // dayCount = 1;
     maxDays = 11;
-    playerCount = 0;
     actionCount = 0;
     actualDays = 1;
     time = 0;
@@ -144,38 +102,61 @@ function Day(params) {
 
     $( "#next" ).hide();
 
-    // for (dayCount = 1; dayCount < maxDays; dayCount++) {
-    
     dayArray.push("its day:" + dayCount++);
+    
 
     $.each(Players, function(index) {
+        
         if (Person[Players[index]]["status"] == "alive") {
         eventRoll =  Math.floor(Math.random()*2);
-        // console.log(eventRoll);
-        // console.log("its day:" + actualDays++);
-        switch (eventRoll) {
-            case 0:
-            hostileEvents(index);
-                break;
 
-            case 1:
-            passiveEvents(index);
-                break;
+            switch (eventRoll) {
+                case 0:
+                hostileEvents(index);
+                playerCount--;
+                    break;
+
+                case 1:
+                passiveEvents(index);
+                    break;
+            }
         }
-    }
-        // console.log("the day ends");
+
     });
     dayArray.push("the day ends");
 
-    
     $.each(dayArray, function(index){
         setTimeout(function() {
-
             console.log(dayArray[index]);
-
             if(dayArray.length - 1 === index) {
                 console.log('loop ends');
                 $( "#next" ).show();
+                if(playerCount === 0) {
+                    console.log("everybody loses");
+                    $( "#next" ).hide();
+                }
+                else if(playerCount === 1) {
+
+                    $.each(Players, function(index) {
+                        if (Person[Players[index]]["status"] == "alive") {
+                            if (Players[index] != "User") {
+                                Winnername = Person[Players[index]]["name"];
+                                console.log(Winnername + " wins");
+                            }
+                            else {
+                                console.log("you win");
+                                e.preventDefault();
+                                $.ajaxSetup({
+                                   headers: {
+                                       'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                                   }
+                               });
+                            }
+                        }
+                    });
+
+                    $( "#next" ).hide();
+                }
             }
 
         }, time);
@@ -184,78 +165,51 @@ function Day(params) {
 }
 
 function hostileEvents(index){
-        // setTimeout(function() {
-            // dayArray.push("its day:" + actualDays++);
 
-            // $.each(Players, function(index) {
-                    if(Person[Players[index]]["Player"] == "male") {
+    if(Person[Players[index]]["Player"] == "male") {
+        pronoun = "his";
+    }
+    else if (Players[index] == "User") {
+        pronoun = "your";
+    }
+    else {
+        pronoun = "her";
+    }
 
-                        pronoun = "his";
-
-                    }
-                    else {
-
-                        pronoun = "her";
-
-                    }
-
-                    username = Person[Players[index]]["name"];
-
-                    eventRoll =  Math.floor(Math.random()*3);
-
-                    var hostileEventsList = [username + " tripped on " + pronoun + " dick and fell to their death", username + " collided with an asteroid", username + " has encountered aliens and got zapped"];
-
-                    
-                    // dayArray = hostileEventsList[eventRoll];
-                    dayArray.push(hostileEventsList[eventRoll]);
-                    // console.log(dayArray);
-                    Person[Players[index]] = {
-                        "status" : "dead"                  
-                    };
-                
-
-            // });
-
-    };
+    if(Players[index]  == "User") {
+        username = "you";
+    } else {
+        username = Person[Players[index]]["name"];
+    }
+    eventRoll =  Math.floor(Math.random()*3);
+    var hostileEventsList = [username + " tripped on " + pronoun + " dick and fell to their death", username + " collided with an asteroid", username + " has encountered aliens and got zapped"];
+    dayArray.push(hostileEventsList[eventRoll]);
+    Person[Players[index]] = {
+        "status" : "dead"                  
+    }; 
+};
 
 function passiveEvents(index){
-    // for (dayCount = 1; dayCount < maxDays; dayCount++) {
 
-        // setTimeout(function() {
-            // dayArray.push("its day:" + actualDays++);
 
-            // $.each(Players, function(index) {
-                // if (Person[Players[index]]["status"] == "alive") {
-                    if(Person[Players[index]]["Player"] == "male") {
+    if(Person[Players[index]]["Player"] == "male") {
+        pronoun = "his";
+    }
+    else if (Players[index] == "User") {
+        pronoun = "your";
+    }
+    else {
+        pronoun = "her";
+    }
 
-                        pronoun = "his";
-
-                    }
-                    else {
-
-                        pronoun = "her";
-
-                    }
-
-                    username = Person[Players[index]]["name"];
-
-                    eventRoll =  Math.floor(Math.random()*3);
-
-                    var passiveEventsList = [username + " is taking a nap", username + " doesn't want to get out of bed", username + " is doing a flip", username + " is confused"];
-
-                    
-                    // dayArray = hostileEventsList[eventRoll];
-                    dayArray.push(passiveEventsList[eventRoll]);
-                    // console.log(dayArray);
-                // }
-
-            // });
-
+    if(Players[index]  == "User") {
+        username = "you";
+    } else {
+        username = Person[Players[index]]["name"];
+    }
+    username = Person[Players[index]]["name"];
+    eventRoll =  Math.floor(Math.random()*3);
+    var passiveEventsList = [username + " is taking a nap", username + " doesn't want to get out of bed", username + " is doing a flip", username + " is confused"];
+    dayArray.push(passiveEventsList[eventRoll]);
     };
-
-// }
-
-
-
-
 });
