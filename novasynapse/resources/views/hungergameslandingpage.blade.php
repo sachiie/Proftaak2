@@ -27,8 +27,8 @@
                     </div>
                     <div class="container">
                     <div class="row hunger-row">
-                    <img src="css/hunger-images/jon.png" class="your-img">
                     @foreach ($results as $results)
+                    <img src="css/profile-images/{{  $results->user_id }}.png" class="your-img">
                         <div id="username" class="w-100 id-name"><h1>Name  {{  $results->profile_name }} </h1></div>
                         <h1 class="gender-head">Gender</h1>
                     @endforeach
@@ -62,12 +62,6 @@
           <button id="next" class="btn mh-100">Next day</button>
           <button id="start" class="btn w-100 fixed-bottom build-header">Start</button>
 </div>
-
-@foreach ($results as $results)
-    <textarea id="username" style="margin-left: -999%;" disabled>
-        {{  $results->profile_name }}
-    </textarea>
-@endforeach
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">

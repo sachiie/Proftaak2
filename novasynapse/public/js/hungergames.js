@@ -5,7 +5,6 @@ playerCount = 10;
 
 $( "#start" ).hide();
 $( "#next" ).hide();
-
 var Useralias = $('#username').val();
 var Winnername;
 
@@ -55,7 +54,9 @@ function GenerateRandomUsers() {
                };
         }
 
+        if (Players[index] != "User") {
         $("#player-list").append('<img data-toggle="modal" data-target="#myModal" id="' + Person[Players[index]]["player"] + '" name="' + Person[Players[index]]["name"] + '" src="' + Person[Players[index]]["image"] + '" alt="..." style="height: 150px;" class="img player">');
+        }
     
     });
 
@@ -78,18 +79,21 @@ $(document).on('click', ".player", function(){
         $("#player-list").empty();
         $.each(Players, function(index) {
 
+            if (Players[index] != "User") {
            $("#player-list").append('<img data-toggle="modal" data-target="#myModal" id="' + Person[Players[index]]["player"] + '" name="' + Person[Players[index]]["name"] + '" src="' + Person[Players[index]]["image"] + '" alt="..." style="height: 150px;" class="img player">');
-       });
+            }
+        });
     });
     console.log(Person);
 });
 
 function StartGame() {
     $("#player-list").empty();
-    $( "#start" ).hide()
-
+    $( "#start" ).hide();
+    $( ".your-char" ).hide();
+    $( ".build-header" ).hide();
     Day();
-
+    
 }
 
 function Day(params) {
