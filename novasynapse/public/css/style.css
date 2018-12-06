@@ -289,6 +289,33 @@ h1 {
   width: 100% !important;
 }
 
+.hunger-main button {
+  color: #E71D36;
+  letter-spacing: 1px;
+  font-size: 25px;
+  font-family: Droid;
+  background: #2E294E;
+  border: #2E294E;
+}
+
+.hunger-main button:hover {
+  background-color: #211e38 !important;
+}
+
+.hungry-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+.hungry-container .edit-player {
+  background: #DBD6CB !important;
+  padding: 10px;
+}
+
 .hungry-container .gender-head {
   margin-left: 155px !important;
 }
@@ -303,16 +330,6 @@ h1 {
 
 .hungry-container .hunger-row h1 {
   color: #2E294E !important;
-}
-
-.hungry-container .players-row h1 {
-  max-height: 37px;
-}
-
-.hungry-container .players-row .player-border {
-  border: 2px solid #2E294E;
-  border-radius: 4px;
-  margin-bottom: 10px;
 }
 
 .hungry-container .your-img {
@@ -341,18 +358,15 @@ h1 {
 }
 
 .hungry-container .your-id #username h1 {
-  padding-left: 65px;
+  padding-left: 63px;
   color: #DBD6CB !important;
-}
-
-.hungry-container h1 {
-  max-width: 470px;
 }
 
 .hungry-container img {
   max-width: 150px;
   max-height: 150px;
   border-radius: 100px;
+  border: none !important;
 }
 
 .hungry-container button {
@@ -372,17 +386,49 @@ h1 {
 }
 
 .hungry-container #player-list {
-  max-width: 75%;
   max-height: 100%;
-  background: #DBD6CB;
-  border-radius: 4px;
   padding: 10px;
 }
 
 .hungry-container #player-list img {
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 125px;
+  max-height: 125px;
   border-radius: 100px;
+}
+
+.modal-body, .modal-header, .modal-footer {
+  background: #2E294E !important;
+  border: 1px solid #2c2749 !important;
+}
+
+.modal-header {
+  color: #E71D36;
+}
+
+.modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #E71D36 !important;
+}
+
+.modal-body label {
+  font-family: Droid, arial;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.modal-footer button {
+  font-family: Droid, arial;
+  font-size: 25px;
+  background: #E71D36 !important;
+  color: #2E294E;
 }
 
 .hunger-container h1 {
@@ -408,7 +454,7 @@ h1 {
 }
 
 .hunger-container #player-list {
-  background: #DBD6CB;
+  height: 100% !important;
   border-radius: 4px;
   padding: 10px;
 }
