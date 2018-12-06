@@ -15,6 +15,7 @@
         </div>
     </div>
     <button id="generate" class="btn bubbly-button w-100">Generate</button>
+    <h1 class="text-center build-header ">Build your game!</h1>
     <div class="row hungry-container mx-auto">
             <div class="col your-char h-100">
                 <div class="col-sm your-id">
@@ -59,7 +60,7 @@
 
           </div>
           <button id="next" class="btn mh-100">Next day</button>
-          <button id="start" class="btn w-100 fixed-bottom">Start</button>
+          <button id="start" class="btn w-100 fixed-bottom build-header">Start</button>
 </div>
 
 <!-- Modal -->
