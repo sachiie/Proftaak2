@@ -14,6 +14,16 @@
             </div> --}}
         </div>
     </div>
+    <div class="col-md-6 h-100 game-container">
+        <div class="col-5 player-container text-center">
+
+        </div>
+        <div class="col-5 event-container">
+            Test 
+            Test
+            test
+        </div>
+    </div>
     <button id="generate" class="btn bubbly-button w-100">Generate</button>
     <h1 class="text-center build-header ">Build your game!</h1>
     <div class="row hungry-container mx-auto">
@@ -39,7 +49,7 @@
                 </div>
             </div>
             <h1></h1>
-            <div class="col">
+            <div class="col player-list-row">
                 <div class="container flex-row">
                     <div class="row text-center players-row">
                         <div class="col mx-auto h-100" id="player-list">

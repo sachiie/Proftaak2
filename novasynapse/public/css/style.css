@@ -474,6 +474,20 @@ h1 {
   border-radius: 100px;
 }
 
+.game-container {
+  background: #2E294E;
+}
+
+.game-container .game-img {
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 100px;
+}
+
+.game-container .event-container {
+  height: 95vh;
+}
+
 @media only screen and (min-width: 850px) {
   .flex-wrap {
     display: -webkit-box;
