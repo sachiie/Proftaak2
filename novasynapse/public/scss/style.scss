@@ -115,6 +115,8 @@ nav {
 .logo{
     width: 65px !important;
     height: 65px !important;
+    max-height: 65px !important;
+    max-width: 65px !important; 
     margin: 0 auto;
 }
 
@@ -280,7 +282,7 @@ h1{
 
 //end login page
 
-//hunger games page
+//hunger games pages
 .hunger-main{
     button{
         color: $novaPink;
@@ -310,7 +312,7 @@ h1{
     }
 
     .gender-head{
-        margin-left: 155px !important;
+        margin-left: 135px !important;
     }
 
     .hunger-row{
@@ -318,10 +320,20 @@ h1{
 
         .logo{
             margin-left: 0px;
+            min-width: 65px !important;
+            max-width: 65px !important;
         }
 
         h1{
             color: $novaBlue !important;
+        }
+
+        img{
+            min-width: 125px !important;
+            max-width: 125px !important;
+            max-height: 125px !important;
+            border-radius: 100px !important;
+            border: none !important;
         }
     }
 
@@ -350,7 +362,7 @@ h1{
         // height: 75% !important;
 
         .id-name{
-            margin-left: 12% !important;
+            margin-left: 9% !important;
         }
 
     #username{
@@ -367,10 +379,11 @@ h1{
     }
 
     img{
-        max-width: 150px;
-        max-height: 150px;
-        border-radius: 100px;
-        border: none !important;
+        // min-width: 125px !important;
+        // max-width: 125px !important;
+        // max-height: 125px !important;
+        // border-radius: 100px !important;
+        // border: none !important;
     }
 
     button{
@@ -463,8 +476,8 @@ h1{
     }
 
     img{
-        max-width: 150px;
-        max-height: 150px;
+        max-width: 125px;
+        max-height: 125px;
         border-radius: 100px;
     }
 
@@ -486,8 +499,8 @@ h1{
         padding: 10px;
 
         img{
-            max-width: 150px;
-            max-height: 150px;
+            max-width: 125px;
+            max-height: 125px;
             border-radius: 100px;
         }
     }
