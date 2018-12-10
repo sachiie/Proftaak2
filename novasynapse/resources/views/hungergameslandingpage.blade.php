@@ -59,6 +59,8 @@
             </div> --}}
 
           </div>
+          <button id="victory" class="btn mh-100">Victory</button>
+          <button id="defeat" class="btn mh-100">Defeat</button>
           <button id="next" class="btn mh-100">Next day</button>
           <button id="start" class="btn w-100 fixed-bottom build-header">Start</button>
 </div>

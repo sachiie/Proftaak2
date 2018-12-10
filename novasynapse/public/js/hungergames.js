@@ -5,6 +5,8 @@ playerCount = 10;
 
 $( "#start" ).hide();
 $( "#next" ).hide();
+$( "#victory" ).hide();
+$( "#defeat" ).hide();
 var Useralias = $('#username').val();
 var Winnername;
 
@@ -79,9 +81,9 @@ $(document).on('click', ".player", function(){
         $("#player-list").empty();
         $.each(Players, function(index) {
 
-            if (Players[index] != "User") {
+            // if (Players[index] != "User") {
            $("#player-list").append('<img data-toggle="modal" data-target="#myModal" id="' + Person[Players[index]]["player"] + '" name="' + Person[Players[index]]["name"] + '" src="' + Person[Players[index]]["image"] + '" alt="..." style="height: 150px;" class="img player">');
-            }
+            // }
         });
     });
     console.log(Person);
@@ -138,6 +140,7 @@ function Day(params) {
                 if(playerCount === 0) {
                     console.log("everybody loses");
                     $( "#next" ).hide();
+                    $( "#defeat" ).show();
                 }
                 else if(playerCount === 1) {
 
@@ -146,15 +149,11 @@ function Day(params) {
                             if (Players[index] != "User") {
                                 Winnername = Person[Players[index]]["name"];
                                 console.log(Winnername + " wins");
+                                $( "#defeat" ).show();
                             }
                             else {
                                 console.log("you win");
-                                e.preventDefault();
-                                $.ajaxSetup({
-                                   headers: {
-                                       'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-                                   }
-                               });
+                                $( "#victory" ).show();
                             }
                         }
                     });
