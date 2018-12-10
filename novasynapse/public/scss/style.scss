@@ -80,7 +80,6 @@ html, body {
 //navbar
 nav{
     background: $novaBlue !important;
-    height: 70px;
     font-family: $droid;
     font-size: 30px;
     box-shadow: none;
@@ -90,6 +89,7 @@ nav {
     a{
     letter-spacing: 0.5px;
     color: $novaPink !important;
+    padding-left: 10px;
     }
 }
 
@@ -468,7 +468,6 @@ h1{
         // align-items: center; 
         // max-width: 35%;
         // height: 50%;
-        // max-height: 50%;
     }
 
     h1{
