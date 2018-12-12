@@ -27,9 +27,19 @@ $( document ).ready(function() {
         gameStarted = true;
     
         var randomNamesList = ["bob", "marcella", "steve"];
-        var randomImageList = ["http://footage.framepool.com/shotimg/qf/161475002-gossip-standing-out-from-the-crowd-multicultural-business-attire.jpg",
-        "https://banner2.kisspng.com/20180207/wte/kisspng-stock-photography-black-happiness-african-american-recommended-gesture-business-people-do-5a7b5e050e1b08.9480166115180344370578.jpg","https://amp.businessinsider.com/images/5899ffcf6e09a897008b5c04-750-750.jpg",
-        "https://banner2.kisspng.com/20180428/vxq/kisspng-thumb-signal-businessperson-stock-photography-ok-5ae4846b292d62.8008028615249255471687.jpg"];
+        var randomImageList = [ 
+        "https://i.imgur.com/HOiKNCH.png",
+        "https://i.imgur.com/cqpSh5z.png",
+        "https://i.imgur.com/uCGMfnQ.png",
+        "https://i.imgur.com/brZ4x72.png",
+        "https://i.imgur.com/vrHps8O.png",
+        "https://i.imgur.com/wjpPZPU.png",
+        "https://i.imgur.com/iV9kiwQ.png",
+        "https://i.imgur.com/tnWHzmP.png",
+        "https://i.imgur.com/2dI1gKh.png",
+        "https://i.imgur.com/RDqGFUm.png"
+        ];
+        
         var randomSex = ["Male", "Female"];
         
         $.each(Players, function( index, value ) {
@@ -163,6 +173,28 @@ $( document ).ready(function() {
                                     Winnername = Person[Players[index]]["name"];
                                     console.log(Winnername + " wins");
                                     $( "#defeat" ).show();
+
+                                    $.ajaxSetup({
+                                        headers: {
+                                          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                        }
+                                      });
+
+                                    $.ajax({
+                                        url:"updatescore",  
+                                        method:"POST",  
+                                        data:{
+                                             gamesplayed: 1,
+                                             type: 'defeat'
+                                        },                              
+                                        success: function( data ) {
+                                            console.log("data send");
+                                        },
+                                        error: function (error) {
+                                            console.log('Error:', error);
+                                        }
+                                    });
+                                    
                                 }
                                 else {
                                     console.log("you win");

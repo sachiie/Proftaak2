@@ -23,3 +23,4 @@ Route::post('/naam','UserModelController@storenaam');
 Route::post('/bio','UserModelController@storebio');
 Route::post('/profilepic','UserModelController@uploadprofilepic');
 Route::post('/backgroundpic','UserModelController@uploadbackgroundpic');
+Route::post('/updatescore','UserModelController@gameupdate');

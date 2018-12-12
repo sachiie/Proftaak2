@@ -140,6 +140,27 @@ class UserModelController extends Controller
 
     }
 
+    public function gameupdate(Request $request)
+    {
+        $id = Auth::user()->id;
+
+        $count = count(DB::table('game_details')->get()->where("user_id", $id));
+        
+        if ($count != 1) {
+            DB::table('game_details')->insert(
+                ['user_id' => $id, 'games_won' => 0, 'games_lost' => 0, 'games_played' => 0]
+            );
+        }
+
+        if ($request->type == "defeat") {
+
+            DB::table('game_details')->where("user_id", $id)->increment('games_lost');
+            DB::table('game_details')->where("user_id", $id)->increment('games_played');
+
+        }
+
+    }
+
     // /**
     //  * Display the specified resource.
     //  *
