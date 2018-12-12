@@ -157,6 +157,11 @@ class UserModelController extends Controller
             DB::table('game_details')->where("user_id", $id)->increment('games_lost');
             DB::table('game_details')->where("user_id", $id)->increment('games_played');
 
+        } else if ($request->type == "victory") {
+
+            DB::table('game_details')->where("user_id", $id)->increment('games_won');
+            DB::table('game_details')->where("user_id", $id)->increment('games_played');
+
         }
 
     }

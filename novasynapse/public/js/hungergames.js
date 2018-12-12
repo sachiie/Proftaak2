@@ -164,6 +164,27 @@ $( document ).ready(function() {
                         console.log("everybody loses");
                         $( "#next" ).hide();
                         $( "#defeat" ).show();
+
+                        $.ajaxSetup({
+                            headers: {
+                              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            }
+                          });
+
+                        $.ajax({
+                            url:"updatescore",  
+                            method:"POST",  
+                            data:{
+                                 gamesplayed: 1,
+                                 type: 'defeat'
+                            },                              
+                            success: function( data ) {
+                                console.log("data send");
+                            },
+                            error: function (error) {
+                                console.log('Error:', error);
+                            }
+                        });
                     }
                     else if(playerCount === 1) {
     
@@ -199,6 +220,27 @@ $( document ).ready(function() {
                                 else {
                                     console.log("you win");
                                     $( "#victory" ).show();
+
+                                    $.ajaxSetup({
+                                        headers: {
+                                          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                        }
+                                      });
+
+                                    $.ajax({
+                                        url:"updatescore",  
+                                        method:"POST",  
+                                        data:{
+                                             gamesplayed: 1,
+                                             type: 'victory'
+                                        },                              
+                                        success: function( data ) {
+                                            console.log("data send");
+                                        },
+                                        error: function (error) {
+                                            console.log('Error:', error);
+                                        }
+                                    });
                                 }
                             }
                         });
