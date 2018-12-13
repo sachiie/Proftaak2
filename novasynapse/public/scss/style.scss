@@ -17,7 +17,8 @@ $novaDarkb: rgb(44, 39, 73);
 $novaGray: #DBD6CB;
 
 //other variables
-$full: 100%;
+$break-small: 320px;
+$break-large: 1443px;
 
 html, body {
     background: $homeBg;
@@ -507,24 +508,63 @@ h1{
 
 .game-container{
     background: $novaBlue;
+    height: 75px;
+
+    h1{
+        font-size: 35px !important;
+    }
+
+    .player-container{
+        padding: 0px;
+        max-height: 45px !important;
+        min-width: 475px !important;
+    }
 
     .game-img{
-        max-width: 30px;
-        max-height: 30px;
+        max-width: 45px;
+        min-height: 45px !important;
+        max-height: 45px;
         border-radius: 100px;
     }
     
     .event-container{
-        height: 95vh;
+        height: 65vh;
+        overflow-y: scroll;
     }
 }
 
 //end hungergames page
 
-@media only screen and (min-width: 850px) {
-    .flex-wrap {
+@media only screen and (min-width: $break-large) {
+
+    // .hunger-main{
+    //     display: flex !important;
+    //     flex-wrap: wrap !important;
+    // }
+
+    .game-container{
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1500px){
+    .col-sm-4 {
+        min-width: 100% !important;
+    }
+
+    .player-container{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 !important;
+        min-height: 65% !important;
+    }
+
+    .game-container{
+        display: flex;
+        flex-direction: column;
+
     }
 }
 

@@ -2,28 +2,23 @@
 
 @section('content')
 <div class="container-fluid hunger-main">
-    <div class="row">
-        <div class="col-md-12 hunger-container h-100 flex-column">
-            {{-- <h1>You</h1>
-            <div class="col-6" id="your-list">
-                <img src="css/hunger-images/jon.png">
-            </div> --}}
+    <div class="container-fluid full-game-container">
+        <div class="row">
+            <div class="col-sm-4 h-75 game-container">
+                <h1 class="h-75">Day</h1>
+                <div class="col-8 player-container text-center">
 
-            {{-- <h1>Your team</h1>
-            <div class="col-6" id="player-list">
-            </div> --}}
-        </div>
-    </div>
-    <div class="col-md-6 h-100 game-container">
-        <div class="col-5 player-container text-center">
+                </div>
+                <div class="col-12 event-container">
+                    
+                </div>
+            </div>
+            <div class="col-sm-6 h-75 game-container">
+                    <h1 class="h-75">Day</h1>
 
+            </div>
         </div>
-        <div class="col-5 event-container">
-            Test 
-            Test
-            test
-        </div>
-    </div>
+</div>
     <button id="generate" class="btn bubbly-button w-100">Generate</button>
     <h1 class="text-center build-header ">Build your game!</h1>
     <div class="row hungry-container mx-auto">
@@ -49,6 +44,9 @@
                 </div>
             </div>
             <h1></h1>
+            <a id="victory" class="btn mh-100" href="hey">Victory</a>
+            <a id="defeat" class="btn mh-100" href="hey">Defeat</a>
+            <button id="next" class="btn mh-100" href="hey">Next day</button>
             <div class="col player-list-row">
                 <div class="container flex-row">
                     <div class="row text-center players-row">
@@ -69,9 +67,6 @@
             </div> --}}
 
           </div>
-          <a id="victory" class="btn mh-100" href="hey">Victory</a>
-          <a id="defeat" class="btn mh-100" href="hey">Defeat</a>
-          <button id="next" class="btn mh-100" href="hey">Next day</button>
           <button id="start" class="btn w-100 fixed-bottom build-header" href="hey">Start</button>
 </div>
 
