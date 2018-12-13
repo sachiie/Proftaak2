@@ -530,6 +530,17 @@ h1{
     .event-container{
         height: 65vh;
         overflow-y: scroll;
+
+        p{
+            color: $novaGray !important;
+        }
+
+        .hunger-name{
+            margin: 0;
+            padding: 0;
+            max-width: 100px;
+            color: $novaPink !important;
+        }
     }
 }
 
