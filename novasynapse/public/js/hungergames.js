@@ -153,10 +153,11 @@ $( document ).ready(function() {
     
         });
         dayArray.push("the day ends");
-    
+        
         $.each(dayArray, function(index){
             setTimeout(function() {
                 console.log(dayArray[index]);
+                $(".event-container").append('<p>' + dayArray[index] + '</p>');
                 if(dayArray.length - 1 === index) {
                     console.log('loop ends');
                     $( "#next" ).show();
