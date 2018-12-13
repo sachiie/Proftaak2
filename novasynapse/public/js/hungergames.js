@@ -51,7 +51,7 @@ $( document ).ready(function() {
             console.log(name);
             Person[Players[index]] = {
                 "player": index,
-                "name" : randomNamesList[name],
+                "name" : "<p class='hunger-name'>" + randomNamesList[name] + "</p>",
                 "sex" : randomSex[sex],
                 "image" : randomImageList[image],
                 "status" : "alive"                  
@@ -90,7 +90,7 @@ $( document ).ready(function() {
       
         $("#submitPlayer").on('click', function(){
             console.log(document.getElementById("name").value);
-            Person['Player'+id]["name"] =  document.getElementById("name").value;
+            Person['Player'+id]["name"] =  "<p class='hunger-name'>" + document.getElementById("name").value + "</p>";
             Person['Player'+id]["image"] =  document.getElementById("link").value;
             Person['Player'+id]["sex"] =  document.getElementById("sex").value;
             $("#player-list").empty();
