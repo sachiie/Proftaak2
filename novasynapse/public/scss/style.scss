@@ -342,6 +342,35 @@ h1{
         background-color: rgb(33, 30, 56) !important;
     }
 
+    .image-upload > input
+    {
+        display: none;
+    }
+
+    .image-upload{
+        max-width: 200px;
+
+        button{
+            width: 200px;
+            max-width: 200px;
+            letter-spacing: 1px;
+            font-size: 25px;
+            font-family: $droid;
+            background: $novaBlue;
+            border: $novaBlue;
+        }
+    
+        button:hover{
+            background-color: rgb(33, 30, 56) !important;
+        }
+    }
+
+    .image-upload img
+    {
+        width: 80px;
+        cursor: pointer;
+    }
+
     .edit-profile-form{
         display: flex;
         flex-direction: column;
