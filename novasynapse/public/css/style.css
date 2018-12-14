@@ -329,6 +329,24 @@ h1 {
   width: 100%;
 }
 
+.profile-block .edit-btn {
+  margin-left: 70%;
+  width: 150px;
+  max-width: 200px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  padding: 10px;
+  font-size: 25px;
+  font-family: Droid;
+  background: #2E294E;
+  border: #2E294E;
+}
+
+.profile-block .edit-btn:hover {
+  cursor: pointer;
+  background-color: #211e38 !important;
+}
+
 .profile-block .edit-profile-form {
   display: -webkit-box;
   display: -ms-flexbox;

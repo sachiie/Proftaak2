@@ -4,8 +4,8 @@
 <div class="container-fluid home-container">
     <div class="row justify-content-center">
         <div class="col-md-12 profile-block">
-            <form action="{{ url('/backgroundpic')}}" method="POST" enctype="multipart/form-data">
-                {{csrf_field()}}
+            {{-- <form action="{{ url('/backgroundpic')}}" method="POST" enctype="multipart/form-data">
+                {{csrf_field()}} --}}
             <div class="yes">
                 
                 <div class="">
@@ -29,9 +29,9 @@
                                     <picture>
                                         {{-- <source srcset="..." type="image/svg+xml"> --}}
                                         <img src="css/profile-images/{{$results->id}}.png" data-target="#editProfile" data-toggle="modal" class="profile-img">
-                                    </picture>      
+                                    </picture>
                                     <div class="w-100 profileName">
-                                    <h1><label for="userNaam">{{  $info->profile_name }}</label></h1>
+                                    <h1><label for="userNaam">{{  $info->profile_name }} </label><a class="edit-btn" data-target="#editProfile" data-toggle="modal"><i class="fa fa-cog"style="font-size:24px"></i></a></h1>
                                     <h1>Level</h1>
                                     <h1 class="status">Online</h1>
                                     
@@ -90,6 +90,8 @@
                                         <textarea  name="comment" id="comment" type="textarea" rows="4" cols="50" class="form-control">{{  $info->profile_bio }}</textarea>
                                         <button type="submit" class="btn">Send</button>
                                     </form>
+                                    <form action="{{ url('/backgroundpic')}}" method="POST" enctype="multipart/form-data">
+                                        {{csrf_field()}}
                                     <img src="css/background-images/{{$results->id}}.png" class="background-preview" style="">
                                         <label for="avatar">Choose a background picture:</label>
                                         <input type="file" id="backgroundpic" name="backgroundpic" accept="image/png, image/jpeg">

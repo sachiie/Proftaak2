@@ -324,6 +324,23 @@ h1{
     //     width: 300px !important;
     //     margin: 0 !important;
     // }
+    .edit-btn{
+        margin-left: 70%;
+        width: 150px;
+        max-width: 200px;
+        border-radius: 4px;
+        letter-spacing: 1px;
+        padding: 10px;
+        font-size: 25px;
+        font-family: $droid;
+        background: $novaBlue;
+        border: $novaBlue;
+    }
+
+    .edit-btn:hover{
+        cursor: pointer;
+        background-color: rgb(33, 30, 56) !important;
+    }
 
     .edit-profile-form{
         display: flex;
