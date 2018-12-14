@@ -238,18 +238,18 @@ h1 {
   border-bottom-right-radius: 0px !important;
 }
 
-.card-body, .card {
+.card-body-login, .card-login {
   color: #2E294E;
   background-color: #E71D36 !important;
   border-radius: 0px !important;
 }
 
-.card-body h1, .card h1 {
+.card-body-login h1, .card-login h1 {
   color: #2E294E !important;
   font-family: Droid, arial;
 }
 
-.card-body button, .card button {
+.card-body-login button, .card-login button {
   letter-spacing: 1px;
   font-size: 25px;
   font-family: Droid;
@@ -257,25 +257,25 @@ h1 {
   border: #2E294E;
 }
 
-.card-body button:hover, .card button:hover {
+.card-body-login button:hover, .card-login button:hover {
   background-color: #211e38 !important;
 }
 
-.card-body input, .card input {
+.card-body-login input, .card-login input {
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
 }
 
-.card-body span, .card-body i, .card span, .card i {
+.card-body-login span, .card-body-login i, .card-login span, .card-login i {
   background-color: #2E294E !important;
   border: #2E294E !important;
 }
 
-.card-body a, .card a {
+.card-body-login a, .card-login a {
   color: #2E294E !important;
 }
 
-.card-body .login-container, .card .login-container {
+.card-body-login .login-container, .card-login .login-container {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -287,8 +287,153 @@ h1 {
   justify-content: center !important;
 }
 
-.card-body .loginBtn, .card .loginBtn {
+.card-body-login .loginBtn, .card-login .loginBtn {
   width: 100% !important;
+}
+
+.edit-name {
+  border-radius: .25rem;
+}
+
+.profile-block {
+  background: rgba(255, 255, 255, 0) !important;
+}
+
+.profile-block .bio-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 200px;
+  height: 300px;
+  color: #DBD6CB;
+  padding: 10px !important;
+  border: 2px solid #2E294E !important;
+  border-radius: 4px;
+}
+
+.profile-block .achievement-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  color: #DBD6CB;
+  padding: 10px !important;
+  border-radius: 4px;
+}
+
+.profile-block .achievement-container h1 {
+  width: 100%;
+}
+
+.profile-block .edit-profile-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.profile-block .bio-achieve {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-height: 65vh;
+}
+
+.profile-block .biography {
+  padding: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.profile-block .achievements {
+  padding: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 400px;
+}
+
+.profile-block .achievements label {
+  width: 50%;
+  border-bottom: 2px solid #E71D36;
+}
+
+.profile-block .background-preview {
+  width: 100% !important;
+}
+
+.profile-block .pic-name-edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.profile-block .profile-img, .profile-block picture {
+  border-radius: 4px;
+  width: 200px !important;
+  height: 200px !important;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.profile-block .profileName label {
+  width: 25%;
+  border-bottom: 2px solid #E71D36;
+}
+
+.profile-block .profileName .status {
+  color: #DBD6CB !important;
+}
+
+.profile-block #userNaam {
+  background: rgba(255, 255, 255, 0) !important;
+  border: 1px solid #E71D36;
+}
+
+.profile-block #comment {
+  background: rgba(255, 255, 255, 0) !important;
+  border: 1px solid #E71D36;
+  width: 100% !important;
+}
+
+.profile-block .profileName {
+  padding: 10px;
+}
+
+.card-body-profile {
+  background: rgba(255, 255, 255, 0) !important;
 }
 
 .hunger-main button {
@@ -485,8 +630,7 @@ h1 {
 
 .game-container .player-container {
   padding: 0px;
-  max-height: 45px !important;
-  min-width: 475px !important;
+  min-width: 475px;
 }
 
 .game-container .game-img {
@@ -499,6 +643,7 @@ h1 {
 .game-container .event-container {
   height: 65vh;
   overflow-y: scroll;
+  color: #DBD6CB !important;
 }
 
 .game-container .event-container p {
@@ -512,15 +657,13 @@ h1 {
   color: #E71D36 !important;
 }
 
-@media only screen and (min-width: 1443px) {
-  .game-container {
-    width: 100% !important;
-  }
-}
-
-@media (max-width: 1500px) {
+@media only screen and (max-width: 592px) {
   .col-sm-4 {
-    min-width: 100% !important;
+    min-width: 50% !important;
+  }
+  .event-container {
+    max-width: 400px !important;
+    min-height: 400px !important;
   }
   .player-container {
     display: -webkit-box;
@@ -537,9 +680,34 @@ h1 {
     -ms-flex-align: center;
     align-items: center;
     margin: 0 !important;
+    min-width: 50px !important;
+    max-width: 50px !important;
     min-height: 65% !important;
   }
   .game-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: auto;
+  }
+}
+
+@media (max-width: 1535px) {
+  .col-sm-4 {
+    min-width: 50% !important;
+  }
+  .event-container {
+    margin: 0 !important;
+    max-width: 450px !important;
+    min-height: 450px !important;
+  }
+  .player-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -547,5 +715,27 @@ h1 {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 !important;
+    min-width: 50px !important;
+    max-width: 50px !important;
+    min-height: 65% !important;
+  }
+  .game-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: auto;
   }
 }
