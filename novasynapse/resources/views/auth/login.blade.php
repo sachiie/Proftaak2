@@ -3,11 +3,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-5 login-container">
-            <div class="card">
+            <div class="card card-login">
                 <div class="card-header"><div class="row align-items-center logoLogin">
                         <img class="logo" src="css/logo.png">
                     </div></div>
-                <div class="card-body">
+                <div class="card-body card-body-login">
                         <h1>{{ __('Login') }}</h1>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
