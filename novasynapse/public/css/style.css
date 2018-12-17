@@ -278,11 +278,6 @@ h1 {
   background-color: #211e38 !important;
 }
 
-.card-body-register input {
-  border-top-right-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-}
-
 .card-body-register span, .card-body-register i {
   background-color: #2E294E !important;
   border: #2E294E !important;
