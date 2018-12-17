@@ -26,10 +26,17 @@
                         <div class="row justify-content-center">
                             <div class="col-md-12 form-group user-form edit-profile-form">
                                 <div class="pic-name-edit">
-                                    <picture>
-                                        {{-- <source srcset="..." type="image/svg+xml"> --}}
-                                        <img src="css/profile-images/{{$results->id}}.png" data-target="#editProfile" data-toggle="modal" class="profile-img">
-                                    </picture>
+                                    <form action="{{ url('/profilepic')}}" method="POST" enctype="multipart/form-data">
+                                        {{csrf_field()}}
+                                        <div class="image-upload">
+                                                <label for="profilepic">
+                                                    <img src="css/profile-images/{{$results->id}}.png" class="profile-img">
+                                                </label>
+                                            
+                                                <input id="profilepic" type="file" name="profilepic" accept="image/png, image/jpeg"/>
+                                                <button type="submit" class="btn">Send</button>
+                                            </div>
+                                    </form>
                                     <div class="w-100 profileName">
                                     <h1><label for="userNaam">{{  $info->profile_name }} </label><a class="edit-btn" data-target="#editProfile" data-toggle="modal"><i class="fa fa-cog"style="font-size:24px"></i></a></h1>
                                     <h1>Level</h1>
@@ -72,12 +79,12 @@
                                     
                                 </div>
                                 <div class="container mx-auto">
-                                    <form action="{{ url('/profilepic')}}" method="POST" enctype="multipart/form-data">
+                                    {{-- <form action="{{ url('/profilepic')}}" method="POST" enctype="multipart/form-data">
                                         {{csrf_field()}}
                                         <label for="avatar">Change profile picture</label>
                                         <input type="file" id="profilepic" name="profilepic" accept="image/png, image/jpeg">
                                         <button type="submit" class="btn">Send</button>
-                                    </form>
+                                    </form> --}}
                                     <form action="{{ url('/naam')}}" method="POST" enctype="multipart/form-data" class="mini-form">
                                         {{csrf_field()}}                             
                                         <h1><label for="userNaam">Username</label></h1>

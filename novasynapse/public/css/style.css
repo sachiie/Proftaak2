@@ -347,6 +347,33 @@ h1 {
   background-color: #211e38 !important;
 }
 
+.profile-block .image-upload > input {
+  display: none;
+}
+
+.profile-block .image-upload {
+  max-width: 200px;
+}
+
+.profile-block .image-upload button {
+  width: 200px;
+  max-width: 200px;
+  letter-spacing: 1px;
+  font-size: 25px;
+  font-family: Droid;
+  background: #2E294E;
+  border: #2E294E;
+}
+
+.profile-block .image-upload button:hover {
+  background-color: #211e38 !important;
+}
+
+.profile-block .image-upload img {
+  width: 80px;
+  cursor: pointer;
+}
+
 .profile-block .edit-profile-form {
   display: -webkit-box;
   display: -ms-flexbox;
