@@ -35,15 +35,25 @@
                             <div class="news">News</div>
                         </div>
                         <div class="col-4 users-header">
-                            <h1>Online users</h1>
-                            <div class="active-users">Users</div>
+                            <h1>Registered users</h1>
+                            <div class="active-users">
+                                <ul class="list-group list-group-flush">
+                                    @foreach ($result as $result)
+                                        <li class="list-group-item" style="display: flex; flex-direction: row; padding-left: 0;"><img style="height: 35px; width: 35px;" src="css/profile-images/{{$result->user_id}}.png" class="rounded mx-auto d-block" alt="" srcset=""> {{$result->profile_name}}</li>
+                                    @endforeach
+                                  </ul>
+                            </div>
                         </div>
                         <div class="col-5 mt-3 news-header hideme">
                                 <h1>Top Survivors</h1>
-                                <div class="news">News</div>
+                                <div class="news">
+                                    @foreach ($users as $user)
+                                    <li class="list-group-item" style="display: flex; flex-direction: row; padding-left: 0;"><img style="height: 35px; width: 35px;" src="css/profile-images/2.png" class="rounded mx-auto d-block" alt="" srcset="">{{$user->games_played}}</li>
+                                    @endforeach
+                                </div>
                             </div>
                             <div class="col-6 mt-3 users-header hideme">
-                                <h1>___________________________________________________</h1>
+                                <h1 class="hide">___________________________________________________</h1>
                                 <div class="active-users">Users</div>
                             </div>
                 </div>
