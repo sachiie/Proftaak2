@@ -343,7 +343,17 @@ h1{
 //end login page
 
 //profile page
+.mini-form{
+    max-height: 255px !important;
+    margin: 0 !important;
+}
+
 .profile-block{
+    max-height: 580px;
+
+    h1{
+        font-size: 48px !important;
+    }
 
     background: rgba(255, 255, 255, 0) !important;
 
@@ -353,34 +363,37 @@ h1{
 
     .bio-container{
         display: flex;
+        flex-direction: column;
         text-overflow: ellipsis;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: scroll;
         max-width: 200px;
-        height: 300px;
-        color: $novaGray;
+        height: 345px;
+        color: $novaBlue;
         padding: 10px !important;
         border: 2px solid $novaBlue !important;
         border-radius: 4px;
+        background: $novaGray;
     }
 
     .achievement-container{
         display: flex;
         text-overflow: ellipsis;
         color: $novaGray;
+        margin: 10px;
+        margin-top: 0px;
         padding: 10px !important;
+        border: 1px solid $novaBlue;
         border-radius: 4px;
+        background: $novaBlue !important;
 
         h1{
             width: 100%;
         }
     }
 
-    // .mini-form{
-    //     width: 300px !important;
-    //     margin: 0 !important;
-    // }
     .edit-btn{
-        margin-left: 70%;
+        margin-left: 65%;
         width: 150px;
         max-width: 200px;
         border-radius: 4px;
@@ -436,15 +449,16 @@ h1{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        max-height: 65vh;
+        max-height: 350px;
     }
 
     .biography{
+        max-height: 365px;
         padding: 3px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-
+        margin-top: 10px;
     }
 
     .achievements{
@@ -452,16 +466,25 @@ h1{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        height: 400px;
+        width: 85% !important;
+        height: 348px;
+        margin-left: 3px;
+        border-radius: 4px;
+        // background: $novaPink;
 
         label{
             width: 50%;
             border-bottom: 2px solid $novaPink;
         }
+
+        h1{
+            // color: $novaBlue !important;
+            padding-left: 5px;
+        }
     }
 
     .background-preview{
-        width: 100% !important;
+        max-width: 75% !important;
     }
 
     .pic-name-edit{
@@ -477,17 +500,20 @@ h1{
         max-height: 200px;
     }
 
-
-    //YES
     .profileName{
+        background: $novaGray;
+        border-radius: 4px;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        margin-left: 8px;
 
         label{
-            width: 25%;
+            width: 30%;
             border-bottom: 2px solid $novaPink;
         }
 
         .status{
-            color: $novaGray !important;
+            color: $novaBlue !important;
         }
     }
 
@@ -513,6 +539,42 @@ h1{
 
 .card-body-profile{
     background: rgba(255, 255, 255, 0) !important;
+}
+
+.modal-profile{
+    button{
+        color: $novaBlue;
+        letter-spacing: 1px;
+        font-size: 25px;
+        margin-top: 10px;
+        width: 100%;
+        font-family: $droid;
+        background: $novaPink;
+        border: $novaPink;
+    }
+
+    button:hover{
+        color: $novaPink;
+        background-color: rgb(33, 30, 56) !important;
+    }
+
+    input, textarea{
+        color: $novaGray;
+    }
+
+    label{
+        font-size: 30px;
+    }
+
+    .choose-bg{
+        padding-top: 10px;
+        padding: 5px;
+        border-top: 1px solid $novaDarkb !important;
+    }
+}
+
+.update-bio{
+    background: $novaPink !important;
 }
 
 //hunger games pages
@@ -832,6 +894,12 @@ h1{
     }
 }
 
+@media (max-width: 1300px){
+    .your-img{
+        display: none;
+    }
+}
+
 // @media (min-width: 1535px){
 //     .col-sm-4 {
 //         min-width: 100% !important;
@@ -843,3 +911,10 @@ h1{
 //     }
 // }
 
+@mixin filter($filter-type,$filter-amount) { 
+    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+    -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+    -o-filter: $filter-type+unquote('(#{$filter-amount})');
+    filter: $filter-type+unquote('(#{$filter-amount})');
+  }

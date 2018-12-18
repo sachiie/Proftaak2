@@ -360,23 +360,39 @@ h1 {
   border-radius: .25rem;
 }
 
+.mini-form {
+  max-height: 255px !important;
+  margin: 0 !important;
+}
+
 .profile-block {
+  max-height: 580px;
   background: rgba(255, 255, 255, 0) !important;
+}
+
+.profile-block h1 {
+  font-size: 48px !important;
 }
 
 .profile-block .bio-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   max-width: 200px;
-  height: 300px;
-  color: #DBD6CB;
+  height: 345px;
+  color: #2E294E;
   padding: 10px !important;
   border: 2px solid #2E294E !important;
   border-radius: 4px;
+  background: #DBD6CB;
 }
 
 .profile-block .achievement-container {
@@ -386,8 +402,12 @@ h1 {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   color: #DBD6CB;
+  margin: 10px;
+  margin-top: 0px;
   padding: 10px !important;
+  border: 1px solid #2E294E;
   border-radius: 4px;
+  background: #2E294E !important;
 }
 
 .profile-block .achievement-container h1 {
@@ -395,7 +415,7 @@ h1 {
 }
 
 .profile-block .edit-btn {
-  margin-left: 70%;
+  margin-left: 65%;
   width: 150px;
   max-width: 200px;
   border-radius: 4px;
@@ -461,10 +481,11 @@ h1 {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-height: 65vh;
+  max-height: 350px;
 }
 
 .profile-block .biography {
+  max-height: 365px;
   padding: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -475,6 +496,7 @@ h1 {
   flex-direction: column;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .profile-block .achievements {
@@ -488,7 +510,10 @@ h1 {
   flex-direction: column;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  height: 400px;
+  width: 85% !important;
+  height: 348px;
+  margin-left: 3px;
+  border-radius: 4px;
 }
 
 .profile-block .achievements label {
@@ -496,8 +521,12 @@ h1 {
   border-bottom: 2px solid #E71D36;
 }
 
+.profile-block .achievements h1 {
+  padding-left: 5px;
+}
+
 .profile-block .background-preview {
-  width: 100% !important;
+  max-width: 75% !important;
 }
 
 .profile-block .pic-name-edit {
@@ -518,13 +547,21 @@ h1 {
   max-height: 200px;
 }
 
+.profile-block .profileName {
+  background: #DBD6CB;
+  border-radius: 4px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  margin-left: 8px;
+}
+
 .profile-block .profileName label {
-  width: 25%;
+  width: 30%;
   border-bottom: 2px solid #E71D36;
 }
 
 .profile-block .profileName .status {
-  color: #DBD6CB !important;
+  color: #2E294E !important;
 }
 
 .profile-block #userNaam {
@@ -544,6 +581,40 @@ h1 {
 
 .card-body-profile {
   background: rgba(255, 255, 255, 0) !important;
+}
+
+.modal-profile button {
+  color: #2E294E;
+  letter-spacing: 1px;
+  font-size: 25px;
+  margin-top: 10px;
+  width: 100%;
+  font-family: Droid;
+  background: #E71D36;
+  border: #E71D36;
+}
+
+.modal-profile button:hover {
+  color: #E71D36;
+  background-color: #211e38 !important;
+}
+
+.modal-profile input, .modal-profile textarea {
+  color: #DBD6CB;
+}
+
+.modal-profile label {
+  font-size: 30px;
+}
+
+.modal-profile .choose-bg {
+  padding-top: 10px;
+  padding: 5px;
+  border-top: 1px solid #2c2749 !important;
+}
+
+.update-bio {
+  background: #E71D36 !important;
 }
 
 .hunger-main button {
@@ -847,5 +918,11 @@ h1 {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: auto;
+  }
+}
+
+@media (max-width: 1300px) {
+  .your-img {
+    display: none;
   }
 }

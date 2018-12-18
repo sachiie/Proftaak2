@@ -12,7 +12,7 @@
                     @foreach($results as $results)
                         @foreach ($info as $info)
                             
-                        {{  $info->profile_name }}
+                        {{-- {{  $info->profile_name }} --}}
                 </div>
 
                 <div class="card-body-profile">
@@ -34,25 +34,25 @@
                                                 </label>
                                             
                                                 <input id="profilepic" type="file" name="profilepic" accept="image/png, image/jpeg"/>
-                                                <button type="submit" class="btn">Send</button>
+                                                <button type="submit" class="btn update-bio">Send</button>
                                             </div>
                                     </form>
                                     <div class="w-100 profileName">
                                     <h1><label for="userNaam">{{  $info->profile_name }} </label><a class="edit-btn" data-target="#editProfile" data-toggle="modal"><i class="fa fa-cog"style="font-size:24px"></i></a></h1>
                                     <h1>Level</h1>
-                                    <h1 class="status">Online</h1>
+                                    <h1 class="status">Date joined: </h1>
                                     
                                     </div>
                                 </div>
                                 <div class="bio-achieve">
                                 <div class="biography">
-                                    <h1>Biography</h1>
                                     <div class="bio-container">
+                                            <h1>Biography</h1>
                                             {{  $info->profile_bio }}
                                     </div>
                                 </div>
                                 <div class="w-75 achievements">
-                                    <h1>Achievement</h1>
+                                    <h1>Progression</h1>
                                     <div class="achievement-container">
                                         <p>{{ $info->profile_name }} has slain 10 people</p>
                                     </div>
@@ -99,8 +99,8 @@
                                     </form>
                                     <form action="{{ url('/backgroundpic')}}" method="POST" enctype="multipart/form-data">
                                         {{csrf_field()}}
+                                        <label for="avatar" class="choose-bg">Choose a background picture:</label>
                                     <img src="css/background-images/{{$results->id}}.png" class="background-preview" style="">
-                                        <label for="avatar">Choose a background picture:</label>
                                         <input type="file" id="backgroundpic" name="backgroundpic" accept="image/png, image/jpeg">
                                         <button type="submit" class="btn">Send</button>
             
@@ -108,7 +108,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" id="submitPlayer" data-dismiss="modal">Submit</button>
+                                {{-- <button type="button" class="btn btn-default" id="submitPlayer" data-dismiss="modal">Submit</button> --}}
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             </div>
                             </div>
