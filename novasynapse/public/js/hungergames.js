@@ -22,6 +22,10 @@ $( document ).ready(function() {
     $("#generate").click(GenerateRandomUsers);
     $("#start").click(StartGame);
     $("#next").click(Day);
+
+    function checkURL(url) {
+        return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
+    }
     
     function GenerateRandomUsers() {
         gameStarted = true;
@@ -91,14 +95,16 @@ $( document ).ready(function() {
         $("#submitPlayer").on('click', function(){
             console.log(document.getElementById("name").value);
             Person['Player'+id]["name"] =  document.getElementById("name").value;
+            if(checkURL(document.getElementById("link").value)){
             Person['Player'+id]["image"] =  document.getElementById("link").value;
+            }
             Person['Player'+id]["sex"] =  document.getElementById("sex").value;
             $("#player-list").empty();
             $.each(Players, function(index) {
     
-                // if (Players[index] != "User") {
+                if (Players[index] != "User") {
                $("#player-list").append('<img data-toggle="modal" data-target="#myModal" id="' + Person[Players[index]]["player"] + '" name="' + Person[Players[index]]["name"] + '" src="' + Person[Players[index]]["image"] + '" alt="..." style="height: 150px;" class="img player">');
-                // }
+                }
             });
         });
         console.log(Person);
@@ -270,7 +276,7 @@ $( document ).ready(function() {
         if(Players[index]  == "User") {
             username = "you";
         } else {
-            username = Person[Players[index]]["name"];
+            username = "<h1>" + Person[Players[index]]["name"] + "</h1>";
         }
         eventRoll =  Math.floor(Math.random()*3);
         var hostileEventsList = [username + " tripped on " + pronoun + " dick and fell to their death", username + " collided with an asteroid", username + " has encountered aliens and got zapped"];
@@ -298,9 +304,9 @@ $( document ).ready(function() {
         if(Players[index]  == "User") {
             username = "you";
         } else {
-            username = Person[Players[index]]["name"];
+            username = "<h1>" + Person[Players[index]]["name"] + "</h1>";
         }
-        username = Person[Players[index]]["name"];
+        // username = Person[Players[index]]["name"];
         eventRoll =  Math.floor(Math.random()*3);
         var passiveEventsList = [username + " is taking a nap", username + " doesn't want to get out of bed", username + " is doing a flip", username + " is confused"];
         dayArray.push(passiveEventsList[eventRoll]);

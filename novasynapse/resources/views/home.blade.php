@@ -40,7 +40,7 @@
                                     <div class="w-100 profileName">
                                     <h1><label for="userNaam">{{  $info->profile_name }} </label><a class="edit-btn" data-target="#editProfile" data-toggle="modal"><i class="fa fa-cog"style="font-size:24px"></i></a></h1>
                                     <h1>Level</h1>
-                                    <h1 class="status">Date joined: </h1>
+                                    <h1 class="status">Date joined: {{Auth::user()->created_at}}</h1>
                                     
                                     </div>
                                 </div>

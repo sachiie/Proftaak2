@@ -37,7 +37,8 @@
                         <div class="col-4 users-header">
                             <h1>Registered users</h1>
                             <div class="active-users">
-                                <ul class="list-group list-group-flush">
+                                <input type="text" class="live-search-box" placeholder="search here" />
+                                <ul class="list-group live-search-list list-group-flush">
                                     @foreach ($result as $result)
                                         <li class="list-group-item" style="display: flex; flex-direction: row; padding-left: 0;"><img style="height: 35px; width: 35px;" src="css/profile-images/{{$result->user_id}}.png" class="rounded mx-auto d-block" alt="" srcset=""> {{$result->profile_name}}</li>
                                     @endforeach
@@ -47,9 +48,19 @@
                         <div class="col-5 mt-3 news-header hideme">
                                 <h1>Top Survivors</h1>
                                 <div class="news">
-                                    @foreach ($users as $user)
-                                    <li class="list-group-item" style="display: flex; flex-direction: row; padding-left: 0;"><img style="height: 35px; width: 35px;" src="css/profile-images/2.png" class="rounded mx-auto d-block" alt="" srcset="">{{$user->games_played}}</li>
-                                    @endforeach
+                                    {{-- @foreach ($data as $user) --}}
+                                    <label for="gamesplayed">Most games won</label>
+                                    <li class="list-group-item gamesplayed" style="display: flex; flex-direction: row; padding-left: 0;"><img style="height: 35px; width: 35px;" src="css/profile-images/{{$data['wonid']}}.png" class="rounded mx-auto d-block" alt="" srcset="">{{$data['played']}}</li>
+                                    <label for="gameswon">Most games played</label>
+                                    <li class="list-group-item gameswon" style="display: flex; flex-direction: row; padding-left: 0;"><img style="height: 35px; width: 35px;" src="css/profile-images/{{$data['gamesid']}}.png" class="rounded mx-auto d-block" alt="" srcset="">{{$data['won']}}</li>
+                                    <label for="gameslost">Most games lost</label>
+                                    <li class="list-group-item gameslost" style="display: flex; flex-direction: row; padding-left: 0;"><img style="height: 35px; width: 35px;" src="css/profile-images/{{$data['lostid']}}.png" class="rounded mx-auto d-block" alt="" srcset="">{{$data['lost']}}</li>
+                                    {{-- @endforeach --}}
+                                    {{-- @foreach ($games_won as $user)
+                                    <label for="gamesplayed">Most games played</label>
+                                    <li class="list-group-item gamesplayed" style="display: flex; flex-direction: row; padding-left: 0;"><img style="height: 35px; width: 35px;" src="css/profile-images/2.png" class="rounded mx-auto d-block" alt="" srcset="">{{$user->games_won}}</li>
+                                    @endforeach --}}
+                                
                                 </div>
                             </div>
                             <div class="col-6 mt-3 users-header hideme">
