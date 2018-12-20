@@ -926,3 +926,157 @@ h1 {
     display: none;
   }
 }
+
+@media (max-width: 1192px) {
+  .profile-block .edit-btn {
+    margin-left: 62% !important;
+  }
+}
+
+@media (max-width: 855px) {
+  .profile-block .edit-btn {
+    margin-left: 60% !important;
+  }
+}
+
+@media (max-width: 744px) {
+  .profile-block .edit-btn {
+    margin-left: 58% !important;
+  }
+}
+
+@media (max-width: 665px) {
+  .profile-block .edit-btn {
+    margin-left: 55% !important;
+  }
+}
+
+@media (max-width: 592px) {
+  .profile-block .edit-btn {
+    margin-left: 53% !important;
+  }
+}
+
+@media (max-width: 556px) {
+  .profile-block .edit-btn {
+    margin-left: 51% !important;
+  }
+}
+
+@media (max-width: 530px) {
+  .profile-block .edit-btn {
+    margin-left: 48% !important;
+  }
+}
+
+@media (max-width: 496px) {
+  .profile-block .edit-btn {
+    margin-left: 44% !important;
+  }
+}
+
+@media (max-width: 466px) {
+  .profile-block .edit-btn {
+    margin-left: 38% !important;
+  }
+}
+
+@media (max-width: 433px) {
+  .profile-block .edit-btn {
+    margin-left: 30px !important;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 700px) {
+  .news, .news-header, .active-users, .users-header {
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 667px) {
+  #navbarDropdown {
+    margin-left: 0px !important;
+  }
+  .modal-body .modal-container {
+    width: 350px !important;
+  }
+  .profile-img {
+    width: 100% !important;
+  }
+  .edit-profile-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .pic-name-edit {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  .pic-name-edit .profileName {
+    margin-top: 10px;
+    max-width: 300px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .pic-name-edit form {
+    max-height: 260px;
+  }
+  .biography {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    width: 315px !important;
+  }
+  .biography .bio-container {
+    min-width: 315px !important;
+  }
+  .profile-block {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+  }
+  .profile-block .edit-btn {
+    margin-left: 150px !important;
+    width: 100% !important;
+  }
+}

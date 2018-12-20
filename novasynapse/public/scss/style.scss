@@ -900,6 +900,186 @@ h1{
     }
 }
 
+@media (max-width: 1192px){
+    .profile-block {
+
+        .edit-btn{
+            margin-left: 62% !important;
+        }
+    }
+}
+
+@media (max-width: 855px){
+    .profile-block {
+
+        .edit-btn{
+            margin-left: 60% !important;
+        }
+    }
+}
+
+@media (max-width: 744px){
+    .profile-block {
+
+        .edit-btn{
+            margin-left: 58% !important;
+        }
+    }
+}
+
+@media (max-width: 665px){
+    .profile-block {
+
+        .edit-btn{
+            margin-left: 55% !important;
+        }
+    }
+}
+
+@media (max-width: 592px){
+    .profile-block {
+
+        .edit-btn{
+            margin-left: 53% !important;
+        }
+    }
+}
+
+@media (max-width: 556px){
+    .profile-block {
+
+        .edit-btn{
+            margin-left: 51% !important;
+        }
+    }
+}
+
+@media (max-width: 530px){
+    .profile-block {
+
+        .edit-btn{
+            margin-left: 48% !important;
+        }
+    }
+}
+
+@media (max-width: 496px){
+    .profile-block {
+
+        .edit-btn{
+            margin-left: 44% !important;
+        }
+    }
+}
+
+@media (max-width: 466px){
+    .profile-block {
+
+        .edit-btn{
+            margin-left: 38% !important;
+        }
+    }
+}
+
+@media (max-width: 433px){
+    .profile-block {
+
+        .edit-btn{
+            margin-left: 30px !important;
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 700px) {
+    
+    .news, .news-header, .active-users, .users-header{
+        opacity: 1 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+
+} 
+
+@media only screen and (max-width: 667px) {
+
+    #navbarDropdown{
+        margin-left: 0px !important;
+    }
+
+    .modal-body{
+        .modal-container{
+            width: 350px !important;
+        }
+    }
+
+    .profile-img{
+        width: 100% !important;
+    }
+
+    .edit-profile-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pic-name-edit{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column !important;
+        height: auto !important;
+        
+        .profileName{
+            margin-top: 10px;
+            max-width: 300px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        form{
+            max-height: 260px;
+        }
+    }
+
+    .biography{
+        display: flex !important;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column !important;
+        width: 315px !important;
+
+        .bio-container{
+            min-width: 315px !important;
+            // width: 298px !important;
+        }
+    }
+
+    .profile-block {
+        display: flex !important;
+        flex-wrap: wrap;
+        flex-direction: column !important;
+
+        .edit-btn{
+            margin-left: 150px !important;
+            width: 100% !important;
+        }
+    }
+} 
+
+
 // @media (min-width: 1535px){
 //     .col-sm-4 {
 //         min-width: 100% !important;
